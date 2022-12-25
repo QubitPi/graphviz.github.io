@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.109.0">
+<link rel="canonical" type="text/html" href="https://qubitpi.github.io/graphviz.github.io/doc/build.html">
+<meta name="robots" content="noindex, nofollow">
+<link rel="shortcut icon" href="https://qubitpi.github.io/graphviz.github.io/Resources/favicon.png" >
+
+<title>Building | Graphviz</title>
+<meta name="description" content="External packages
+The full build requires external libraries that you must obtain elsewhere.
+Most, if not all of these are optional, and configure …">
+<meta property="og:title" content="Building" />
+<meta property="og:description" content="Graph Visualization Software" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://qubitpi.github.io/graphviz.github.io/doc/build.html" /><meta property="og:site_name" content="Graphviz" />
+<meta itemprop="name" content="Building">
+<meta itemprop="description" content="Graph Visualization Software"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building"/>
+<meta name="twitter:description" content="Graph Visualization Software"/>
+
+
+
+
+<link rel="preload" href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" as="style">
+<link href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://qubitpi.github.io/graphviz.github.io/css/prism.css"/>
+<link rel="canonical" href="https://qubitpi.github.io/graphviz.github.io/doc/build.html">
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="https://qubitpi.github.io/graphviz.github.io/">
+		<span class="navbar-logo"></span><span class="font-weight-bold ">Graphviz</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/download/" ><i class='fas fa-download'></i><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/documentation/" ><i class='fas fa-book'></i><span>Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/gallery/" ><i class='fas fa-images'></i><span>Gallery</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://forum.graphviz.org/" target="_blank" ><i class='fab fa-discourse'></i><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://gitlab.com/graphviz/graphviz" target="_blank" ><i class='fab fa-gitlab'></i><span>GitLab</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"><input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="https://qubitpi.github.io/graphviz.github.io/offline-search-index.50bf51da3021df5a71952d71fe0a660e.json"
+  data-offline-search-base-href="https://qubitpi.github.io/graphviz.github.io/"
+  data-offline-search-max-results="10"
+>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="https://qubitpi.github.io/graphviz.github.io/doc/build.html">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Building</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-167ed270693b32e9bb213c45c34f92dd">Windows</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      <h2 id="external-packages">External packages</h2>
+<p>The full build requires external libraries that you must obtain elsewhere.
+Most, if not all of these are optional, and configure will build graphviz
+with reduced functionality if an external library is not found. Newer
+versions of these libraries should be fine - if not, please let us know.</p>
+<p>A list of these external libraries can be found on the Graphviz <a href="https://qubitpi.github.io/graphviz.github.io/download/source/">source
+download page</a>.</p>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>GD (generic raster graphics driver for PNG, GIF, JPEG)</li>
+<li>ZLIB (raster image compression)
+NB: Use <code>./configure -s</code> to build shared libraries. (See notes in <code>zlib-1.2.3/Makefile</code>)</li>
+</ul>
+<p>These libraries (either static or dynamic) and their interface header files
+must already be on your system. It's OK if you install your own copies of
+these packages, though you may need to tell make or configure where to find
+them. Run <code>configure --help</code> for details.</p>
+<p>On most Linux distributions these packages are already installed or
+installable from packages included in the distribution. You might need to
+install some <code>-devel</code> packages to get the include header files. Also, some of
+these packages require other packages, so for sanity, you should use some
+automated install mechanism such as rpms or macports, or look for complete
+packages.</p>
+<h2 id="abbreviated-build-instructions">Abbreviated Build Instructions</h2>
+<p>The recommended method for building graphviz from a downloaded
+source package is the usual:</p>
+<pre tabindex="0"><code>./configure
+make
+make install
+</code></pre><p>If you are building from Git sources, then you must have
+recent versions of <code>libtool</code>, <code>libltdl-dev</code>, <code>automake</code>, and <code>autoconf</code>.
+Build with:</p>
+<pre tabindex="0"><code>./autogen.sh
+make
+make install
+</code></pre><p><code>autogen.sh</code> accepts the same options as the <code>configure</code>
+script that it generates for subsequent use.</p>
+<h2 id="detailed-build-instructions">Detailed Build Instructions</h2>
+<p>The preferred image renderer is cairo, with support from pango for fonts.
+This handles various bitmap formats as well as svg, pdf and PostScript.</p>
+<p>The generic raster driver is <code>gd</code> and it can be configured to generate GIF
+(no compression), PNG (lossless compression), JPEG (lossy compression), and
+wireless bitmap (WBMP) files. The compressors all need <code>zlib</code>. In the current
+build, we use a top-level <code>config.h</code> file that defines various symbols, such
+as:</p>
+<ul>
+<li><code>HAVE_JPEG</code></li>
+<li><code>HAVE_PNG</code></li>
+</ul>
+<p>This file is typically generated by configure based on how you
+invoke it and what it finds on your system.</p>
+<p>If you don't enable the <code>gd</code> based drivers, graphviz will still have the
+<code>printf</code> style drivers for PostScript and SVG. (However, even these benefit
+from better text size estimation via Freetype, when it is available.)</p>
+<h2 id="build-tools-for-unix">Build tools for Unix</h2>
+<p>Use <code>configure</code> generated by GNU autoconf.
+This comes with the source packages.
+This often works well on a vanilla Linux distribution with
+Tcl/Tk, freetype-devel and libjpeg already installed by root
+under <code>/usr</code>.  It works OK with other versions of Unix, but
+some adjusting of command line arguments
+to <code>configure</code> may be needed.
+For Linux you can also just pick up the source tarball
+or RPMs <a href="https://graphviz.org/download/">here</a>.</p>
+<p>First, if you are using sources from Git, run <code>./autogen.sh</code>
+to generate the <code>configure</code> script.  If you are using sources
+from <code>graphviz-&lt;version&gt;.tar.gz</code> this <code>autogen.sh</code> step should not be
+needed.</p>
+<p>Next, run configure. For help on possible configure options, run:</p>
+<pre tabindex="0"><code>./configure --help
+</code></pre><p>For example, I use</p>
+<pre tabindex="0"><code>./configure  --prefix=$HOME/arch/sgi.mips3 \
+	--with-freetypeincludedir=$HOME/arch/$ARCH/include/freetype2 \
+	--with-freetypelibdir=$HOME/arch/$ARCH/lib \
+	--with-tcl=/usr/common/tcl8.3.3
+</code></pre><p>Obviously you would change the pathnames to reflect your installation.</p>
+<p>Note that the directory <code>${prefix}/include</code> is automatically searched
+for headers, and <code>${prefix}/lib</code> for libraries.</p>
+<p>If you have problems with one or more of the optional script language bindings,
+they can be disabled with e.g. <code>--disable-perl</code>.</p>
+<p>When configure is finished, it reports which optional packages were
+found and which Graphviz features are enabled. If some package or
+feature you expected is not shown as used, you may need to check
+the config.log file or configure.ac or configure files to see what
+went wrong. Usually, any problem can be resolved using environment
+variables or the command-line flags of configure.</p>
+<p>Once configure has finished, complete the build with</p>
+<pre tabindex="0"><code>gmake
+gmake install
+</code></pre><h2 id="build-tools-for-win32">Build tools for win32</h2>
+<p>See separate
+<a href="https://qubitpi.github.io/graphviz.github.io/doc/winbuild.html">build notes</a> for Microsoft Windows.</p>
+<p>With some persistence you can likely get Graphviz to build on
+<a href="http://www.research.att.com/sw/tools/uwin">UWIN</a> or
+<a href="http://www.cygwin.com/">Cygwin</a> installed on Microsoft Windows. You will
+still need various third-party packages to enable all the Graphviz drivers.</p>
+<h2 id="unix-platform-specific-build-notes">Unix platform-specific build notes</h2>
+<h2 id="apple-mac-osx">Apple Mac OS/X</h2>
+<p>Currently, Glen Low provides a full-featured <a href="http://www.graphviz.org/Download_macos.php">port of
+Graphviz</a>.
+Also, Ryan Schmidt maintains versions of Graphviz for macports.</p>
+<p>We recommend using macports to install the desired third-party
+libraries. Once these have been installed,
+the standard build using configure and make works fine. The only caveat
+is that sometimes, an incompatible, non-GNU tool is picked up
+rather than the needed GNU version.</p>
+<p>Compiling Smyrna for OS X, Snow Leopard (Amanda Stent)</p>
+<p><strong>Xcode</strong>:</p>
+<p>First if you updated from Leopard you have to reinstall developer tools.  No getting around it, I tried, you just have to do it.</p>
+<p><strong>Macports</strong>:</p>
+<p>Then you have to uninstall and clean up the Macports ports, all of them.  Take the opportunity to reinstall Macports itself.  There are migration instructions on the web, but it's a little hairier than they make it out to be because some of the links (e.g. hs-ports) will not be there and you will have to get over those hurdles manually.</p>
+<p>Briefly, to do a clean install of macports do:</p>
+<pre tabindex="0"><code>sudo port -f uninstall installed
+sudo port clean --work --archive all
+and then new macports
+and then sudo port install the things you need now
+and possibly sudo port selfupdate and sudo port upgrade outdated at the end
+</code></pre><p>Then you have to install all the tools needed for Smyrna, glut, glade, etc., and all their dependencies.  This takes days.</p>
+<p>Now macports doesn't do glut separately.  It's sneaky because if you say install glut, something will happen, but actually glut now comes with mesa.  This will mess up your head. (The real meat of glut is part of the mesa package - ed.)</p>
+<p><strong>Graphviz</strong>:</p>
+<p>Then you get your graphviz and you configure with <code>--with-smyrna</code>.  I used the following:</p>
+<pre tabindex="0"><code>configure --with-smyrna --with-glutincludedir=/opt/local/var/macports/software/mesa/7.6.1_1+hw_render/opt/local/include --with-glutlibdir=/opt/local/var/macports/software/mesa/7.6.1_1+hw_render/opt/local/lib --prefix=/usr/local/share/graphviz
+</code></pre><p>I use:</p>
+<pre tabindex="0"><code>configure --with-smyrna --with-glutincludedir=/opt/local/include  --with-glutlibdir=/opt/local/lib
+</code></pre><p>On the webs they say to use -framework commandline option to gcc; however I couldn't figure out how to make this work with the makefile and configure file for graphviz.</p>
+<p>Now, I got to a certain point and it grumbled about permissions and refused to go any further.  So you may have to chmod in the source directory.</p>
+<p>And I got to the point where it was building gv_perl.cpp and it refused to go any further.  I got around this eventually by changing the call to XS to XSPROTO, thus obviating the need for <code>XSUB.h</code> (what does it do for you?  nothing!).</p>
+<p>And then it said it was done but when I went to run it it wouldn't start due to some missing template.dot so then you make clean, and make install again because by now you are confused as well.</p>
+<p>And then it should work!</p>
+<p>By the way making by sneakily cd'ing into the macosx folder and using the makefile labeled with your OS <em>does not work</em>.</p>
+<h2 id="aix">AIX</h2>
+<p>Matt Fago tells us that <code>--enable-shared=no</code> is required or the
+executables segfault after seemingly correct compiles.  (Bug #421)</p>
+<h2 id="solaris">Solaris</h2>
+<p>Put <code>/usr/ccs/bin</code> in <code>$PATH</code></p>
+<h2 id="hp-ux">HP-UX</h2>
+<p>The X11 package must include <code>/usr/contrib/X11R6</code>
+as well as the base stuff.  For some reason GNU autoconf doesn't seem to find
+X11 in this location so you may need to add the following to the
+<code>./configure</code> line:</p>
+<pre tabindex="0"><code>--with-Xawincludedir=/usr/contrib/X11R6/include --with-Xawlibdir=/usr/contrib/X11R6/lib
+</code></pre>
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-167ed270693b32e9bb213c45c34f92dd">1 - Windows</h1>
+    
+	<p>For building on Windows:</p>
+<p><strong>(Graphviz versions ≥ 2.41)</strong></p>
+<p>First, in the root of the repository, perform <code>git submodule update --init</code>. This will download all submodules, which are mostly the dependencies for the Windows build.
+Next, add the windows\dependencies\graphviz-build-utilities directory to your PATH (and restart Visual Studio or the prompt with which you execute msbuild after that). This folder contains the tools Bison, Flex and SED (and future additions) with versions that are tested.
+If all went right, the dependencies are now set up and you can build Graphviz.</p>
+<p><strong>(Graphviz versions ≥ 2.30)</strong></p>
+<p>The current build process for Windows using Visual Studio is fairly
+simple <strong>assuming all of the necessary files are available and have
+been put in the correct place</strong>. The build assumes you have installed
+binary versions of <a href="http://www.gtk.org">GTK 2.0</a> or later,
+<a href="http://www.qt.io/">Qt</a>,
+and <a href="http://gnuwin32.sourceforge.net/packages/libtool.htm">ltdl</a>,
+and source versions of <a href="http://gts.sourceforge.net/">GTS</a>
+and <a href="http://www.cs.umd.edu/~mount/ANN/">ann</a>.
+Further instructions can be found in the
+<a href="https://gitlab.com/graphviz/graphviz/issues/36">Graphviz gitlab repository</a>.</p>
+<p>This whole process could and should be simplified. In particular, the
+3rd-party software should not be stored in two places, and the Graphviz
+files that are made part of the release should come from the source package,
+and not be stored separately.
+In addition, the GTS and ANN build should be separate from the Graphviz
+build. As 3rd-party libraries, these should only be built when the source
+is updated.</p>
+<p><strong>(Graphviz versions ≥ 2.22)</strong></p>
+<p>We now build both Visual Studio and MinGW versions of Graphviz.
+In addition, the source package comes with project files for Visual Studio,
+so building from source should be fairly simple in either case.</p>
+<ul>
+<li>The first step is to add the third-party libraries. These are listed
+<a href="https://www.graphviz.org/download/source/">here</a>.
+This is most easily done by installing
+a Windows binary version of <a href="http://www.gtk.org">GTK 2.0</a> or later.</li>
+<li>Next, download and unwrap the
+<a href="https://www.graphviz.org/download/source/">Graphviz source package</a>,
+and copy over either the stable release
+or the development source package.</li>
+</ul>
+<p>Let $ROOT be the root directory (folder)
+in which you stored the Graphviz source.</p>
+<h3 id="building-with-visual-studio">Building with Visual Studio</h3>
+<ol>
+<li>Copy the file $ROOT/windows/config.h into $ROOT.</li>
+<li>Copy the folder $ROOT/windows/FEATURE into $ROOT.</li>
+<li>Start Visual Studio and read in $ROOT/graphviz.sln.
+There are project files for all of the parts of Graphviz.</li>
+<li>Modify the various settings for include file and library directories to find
+the third-party software.</li>
+<li>Modify the settings as to where you want the software installed.</li>
+<li>Build Graphviz.</li>
+</ol>
+<h3 id="building-with-mingw">Building with MinGW</h3>
+<ol>
+<li>
+<p>Install MinGW and Msys.  This gives a mini GNU-like compile environment</p>
+</li>
+<li>
+<p>Set environment variables based on your machine, giving values to the
+first six below:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">export</span> INSTALLROOT           <span style="color:#8f5902;font-style:italic"># Root install directory</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> GTKDIR                <span style="color:#8f5902;font-style:italic"># Root of GTK tree</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> FONTCONFIGINCLUDEDIR  <span style="color:#8f5902;font-style:italic"># Path of fontconfig include dir</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> FONTCONFIGLIBDIR      <span style="color:#8f5902;font-style:italic"># Path of fontconfig lib dir</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> FREETYPEINCLUDEDIR    <span style="color:#8f5902;font-style:italic"># Path of freetype2 include dir</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> FREETYPELIBDIR        <span style="color:#8f5902;font-style:italic"># Path of freetype2 lib dir</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">CFLAGS</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;-DGVDLL=1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">CPPFLAGS</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;-I</span><span style="color:#000">$GTKDIR</span><span style="color:#4e9a06">/include -I</span><span style="color:#000">$GTKDIR</span><span style="color:#4e9a06">/include/freetype2 &#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">LDFLAGS</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;-L</span><span style="color:#000">$GTKDIR</span><span style="color:#4e9a06">/lib -no-undefined&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">FONTCONFIG_CFLAGS</span><span style="color:#ce5c00;font-weight:bold">=</span>-I<span style="color:#000">$GTKDIR</span>/include/
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">FONTCONFIG_LIBS</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;-L</span><span style="color:#000">$FONTCONFIGLIBDIR</span><span style="color:#4e9a06"> -lfontconfig&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">FREETYPE2_CFLAGS</span><span style="color:#ce5c00;font-weight:bold">=</span>-I<span style="color:#000">$FREETYPEINCLUDEDIR</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">FREETYPE2_LIBS</span><span style="color:#ce5c00;font-weight:bold">=</span>-L<span style="color:#000">$FREETYPELIBDIR</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">PKG_CONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">$GTKDIR</span>/bin/pkg-config
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">PKG_CONFIG_PATH</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">$GTKDIR</span>/lib/pkgconfig
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">PANGOFLAGS</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--with-fontconfig --with-fontconfiglibdir=</span><span style="color:#000">$FONTCONFIGLIBDIR</span><span style="color:#4e9a06"> --with-fontconfigincludedir=</span><span style="color:#000">$FONTCONFIGINCLUDEDIR</span><span style="color:#4e9a06"> --with-pangocairo&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Change directory to $ROOT and run configure:</p>
+<pre tabindex="0"><code>./configure -C --prefix=$INSTALLROOT --without-gdk-pixbuf --with-mylibgd --disable-swig --without-x  --disable-tcl --without-ipsepcola --enable-shared --disable-static --with-freetype=$GTKDIR/lib --enable-ltdl $PANGOFLAGS --without-gtk --without-gtkgl
+</code></pre><p>When configure finishes, it lists all of the Graphviz features that have been
+enabled. If there are problems, you can check for errors in <code>config.log</code>.
+You may have to add or modify
+other flags and environment variables for <code>configure</code> to give you the
+settings you want. Run <code>configure --help</code>
+to see the allowed options and environment variables.</p>
+</li>
+<li>
+<p>Run <code>make</code></p>
+</li>
+<li>
+<p>Run <code>make install</code></p>
+</li>
+</ol>
+<p>These builds create a feature-full version of Graphviz. You can tailor
+them to your wants. This is fairly simple for MinGW: just remove or reset
+the flag of the option you don't want. For Visual Studio, you will probably
+need to reset some of the values in <code>config.h</code> and some of the
+compile-time options.</p>
+<hr>
+<p><strong>(2.21 &gt;= Graphviz versions &gt; 2.14)</strong></p>
+<p>To simplify our build process, especially as most Windows users only
+want a binary version of the software, the Graphviz build for Windows
+now uses <a href="http://www.research.att.com/sw/tools/uwin/"><strong>uwin</strong></a>,
+an open-source Unix layer on top of Windows. In this
+environment, we can use essentially the same tools and process
+used on Unix. In particular, we do not have to maintain multiple build
+files.</p>
+<p>To build Graphviz:</p>
+<ul>
+<li>
+<p>Install the third-party libraries. This is most easily done by installing
+a Windows binary verion of <a href="http://www.gtk.org">GTK 2.0</a> or later.</p>
+</li>
+<li>
+<p>Download the <a href="https://www.graphviz.org/download/source/">Graphviz source package</a>,
+and copy over either the stable release <code>graphviz-</code><em>VERSION</em><code>.tar.gz</code>
+or the development source package <code>graphviz-working.tar.gz</code>.</p>
+</li>
+<li>
+<p>Unwrap the package:</p>
+<p>You can use, for example,</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gunzip &lt; graphviz-working.tar.gz <span style="color:#000;font-weight:bold">|</span> tar xf -
+</span></span></code></pre></div><p>Let <code>$ROOT</code> be the directory in which you stored the Graphviz source.</p>
+</li>
+<li>
+<p>Configure the package for your system:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">cd</span> <span style="color:#000">$ROOT</span>
+</span></span><span style="display:flex;"><span>configure --disable-shared --enable-static --with-mylibgd --disable-swig --without-x --without-tclsh --with-codegens --disable-ltdl
+</span></span></code></pre></div><p>You will probably want to provide additional arguments to
+<code>configure</code> to indicate where you have installed GTK, where
+you want the results installed (<code>--prefix</code>) and which
+additional optional packages you want built. Run <code>configure --help</code>
+to see the available set of arguments.</p>
+</li>
+<li>
+<p>Build Graphviz:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make install
+</span></span></code></pre></div></li>
+</ul>
+<p>Presumably, a similar approach would work with Cygwin or MinGW.
+The following are some notes by
+<a href="https://mailman.research.att.com/pipermail/graphviz-devel/2007/000444.html">Steve Roush</a>
+describing how he
+made a static build of the libraries on MinGW.</p>
+<ul>
+<li>
+<p>Install MinGW and Msys. This gives a mini GNU-like compile environment
+that produces Windows-compatible results.</p>
+</li>
+<li>
+<p>You may need to configure and build in Windows &quot;Safe mode&quot;. Try
+<code>./configure</code> in normal mode; if it dies with &quot;fork&quot; problems, use Safe mode.</p>
+</li>
+<li>
+<p>Edit the &quot;configure&quot; file.
+after this line:</p>
+<pre tabindex="0"><code>DEFS=-DHAVE_CONFIG_H
+</code></pre><p>add these lines:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">case</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$host_os</span><span style="color:#4e9a06">&#34;</span> in
+</span></span><span style="display:flex;"><span>    mingw*<span style="color:#ce5c00;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">DEFS</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;</span><span style="color:#000">$DEFS</span><span style="color:#4e9a06"> -DMSWIN32&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">;;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">esac</span>
+</span></span></code></pre></div></li>
+<li>
+<p>run configure:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./configure  --enable-static<span style="color:#ce5c00;font-weight:bold">=</span>yes --enable-shared<span style="color:#ce5c00;font-weight:bold">=</span>no 
+</span></span><span style="display:flex;"><span>--prefix<span style="color:#ce5c00;font-weight:bold">=</span>/usr/local/ --with-libgd<span style="color:#ce5c00;font-weight:bold">=</span>no --enable-ltdl<span style="color:#ce5c00;font-weight:bold">=</span>no --disable-swig  
+</span></span><span style="display:flex;"><span>--disable-sharp --disable-guile --disable-io --disable-java 
+</span></span><span style="display:flex;"><span>--disable-lua --disable-ocaml --disable-perl --disable-php 
+</span></span><span style="display:flex;"><span>--disable-python --disable-ruby --disable-tcl
+</span></span></code></pre></div></li>
+<li>
+<p>edit lib/Makefile</p>
+<p>replace these lines:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span><span style="color:#000">SUBDIRS</span> <span style="color:#ce5c00;font-weight:bold">=</span> cdt graph agraph gd pathplan agutil sfio vmalloc ast vpsc <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    circogen dotgen fdpgen neatogen twopigen common pack gvc <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    ingraphs expr
+</span></span></code></pre></div><p>with these lines:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span><span style="color:#000">SUBDIRS</span> <span style="color:#ce5c00;font-weight:bold">=</span> cdt graph agraph gd pathplan  vpsc <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    circogen dotgen fdpgen neatogen twopigen common pack gvc <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    ingraphs
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make  <span style="color:#8f5902;font-style:italic"># builds most of &#34;lib&#34; (see Makefile changes), cmd/dot and cmd/tools - stops on cmd/gvpr</span>
+</span></span><span style="display:flex;"><span>make install
+</span></span></code></pre></div></li>
+</ul>
+<p>here is the command line I used to build <a href="https://gitlab.com/graphviz/graphviz/-/blob/main/dot.demo/simple.c"><code>simple.c</code></a>,
+after adding a few lines based on
+<a href="https://mailman.research.att.com/pipermail/graphviz-interest/2006q2/003586.html">https://mailman.research.att.com/pipermail/graphviz-interest/2006q2/003586.html</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#000">X</span><span style="color:#ce5c00;font-weight:bold">=</span>simple<span style="color:#000;font-weight:bold">;</span>gcc -v -I<span style="color:#4e9a06">&#39;/usr/local/include/graphviz&#39;</span> -I<span style="color:#4e9a06">&#39;/usr/local/include&#39;</span> 
+</span></span><span style="display:flex;"><span>-o <span style="color:#000">$X</span> -O <span style="color:#000">$X</span>.c  -L/usr/local/lib -L/usr/local/lib/graphviz -lgvc  -lgraph 
+</span></span><span style="display:flex;"><span>-lpathplan -lcdt -lgvplugin_core -lgvplugin_dot_layout 
+</span></span><span style="display:flex;"><span>-lgvplugin_neao_layout -lgvplugin_gd -lgvplugin_pango -lgvc -lpathplan
+</span></span></code></pre></div><p>If you
+desire to build directly using Visual Studio or other non-Unix-based
+environment, you will need to derive the necessary information from the
+supplied Makefiles.</p>
+<hr>
+<p><strong>(2.14 &gt;= Graphviz versions &gt;= 2.3)</strong></p>
+<p>We build Graphviz on Windows using the MS Visual C++ 6.0 compiler
+only. The simplest way to build the software from source on Windows is as
+follows:</p>
+<ol>
+<li>
+<p><a href="https://www.graphviz.org/download/">Download the Windows source package.</a></p>
+</li>
+<li>
+<p>Unwrap the package:</p>
+<p>If you have Unix tools available, you can use</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gunzip &lt; graphviz-win.tgz <span style="color:#000;font-weight:bold">|</span> tar xf -
+</span></span></code></pre></div><p>If not, double click on the file and WinZip should start up and let you
+store all of the files into a directory.</p>
+<p>Let <code>$ROOT</code> be the directory in which you stored the Graphviz source.</p>
+</li>
+<li>
+<p>Add the third-party libraries:</p>
+<ol>
+<li>zlib 1.1.3 <a href="http://www.gzip.org/zlib/">http://www.gzip.org/zlib/</a></li>
+<li>libpng 1.0.6 <a href="http://www.libpng.org/pub/png">http://www.libpng.org/pub/png</a></li>
+<li>jpeg-6b 62 <a href="http://www.ijg.org/">http://www.ijg.org/</a></li>
+<li>freetype 2.1.7 <a href="http://freetype.sourceforge.net/">http://freetype.sourceforge.net/</a></li>
+<li>expat <a href="http://expat.sourceforge.net/">http://expat.sourceforge.net/</a></li>
+</ol>
+<p>The versions should be at least the ones indicated.
+You can download the files from
+<a href="https://www.graphviz.org/Misc/third-party.zip">https://www.graphviz.org/Misc/third-party.zip</a>.
+Unzip the package in the <code>$ROOT</code> directory; this will create a subdirectory called
+<code>third-party</code>.
+Or you can obtain the libraries yourself, and install
+them in <code>$ROOT\third-party</code>
+Also note that these libraries come with the binary release.</p>
+</li>
+<li>
+<p>Build the software in one of the following ways:</p>
+<ul>
+<li>
+<p>Run the script <code>$ROOT\build.bat</code> while in the <code>$ROOT</code>
+directory. You'll first want to check
+that the <code>vc</code> variable points to your local installation of visual C.
+Obviously, this should be run in a DOS command window.</p>
+</li>
+<li>
+<p>The file <code>$ROOT\ws\graphviz.dsw</code>
+is the main workspace for the Graphviz libraries and graph drawing programs.
+The file
+<code>$ROOT\ws\tools.dsw</code> provides the workspace for the
+additional Graphviz tools. Double-clicking on these files will open the
+workspaces using the MS Visual Studio, from which you can use the Build
+menu item to create the various libraries and programs.</p>
+<p>Note that we have avoided all dependencies (i.e., there are no .dep files)
+because we found they tended to include absolute pathnames.
+If necessary, follow the order used in <code>build.bat</code> to be safe.</p>
+</li>
+<li>
+<p>If you have a Unix environment, with a real ksh, run the script
+<code>$ROOT\wmake.sh</code>
+after setting the PATH, LIB and INCLUDE shell variables to the paths where
+the Visual C programs are installed on your machine, and the associated
+library and include file directories.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Once built, all of the libraries and programs will be found in
+either the Release or Debug subdirectory of the corresponding source
+directory. If you wish to install
+the software somewhere, edit the file <code>$ROOT\install.bat</code> to
+set the variable <code>root</code> to be the absolute pathname of the
+directory where you want
+the software installed, and then run the script <code>$ROOT\install.bat</code>
+from the <code>$ROOT</code> directory.</p>
+<p>If you want to change source files, you can just do it and rebuild.
+If, however, you want to add new files or projects, you will
+have to redo the makefiles or scripts.</p>
+<p>If you have problems or questions, please contact us at
+<a href="mailto:erg@research.att.com">erg@research.att.com</a>.</p>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://forum.graphviz.org/" aria-label="User mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/graphviz" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/graphviz" aria-label="Stack Overflow">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitLab" aria-label="GitLab">
+    <a class="text-white" target="_blank" rel="noopener" href="https://gitlab.com/graphviz/graphviz" aria-label="GitLab">
+      <i class="fab fa-gitlab"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 The Graphviz Authors All Rights Reserved</small>
+        
+	
+		<p class="mt-2"><a href="https://qubitpi.github.io/graphviz.github.io/about/">About</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://qubitpi.github.io/graphviz.github.io/js/main.min.91798a335c881f1b6b805085ba4aa22d1dbd2b0b18d105d05189fa104ddae350.js" integrity="sha256-kXmKM1yIHxtrgFCFukqiLR29KwsY0QXQUYn6EE3a41A=" crossorigin="anonymous"></script>
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/prism.js'></script>
+
+
+
+  </body>
+</html>

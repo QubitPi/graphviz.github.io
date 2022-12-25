@@ -1,3 +1,5 @@
+.idea/
+.hugo_build.lock
 .jekyll-cache/
 *.swp
 _site

@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.109.0">
+<link rel="canonical" type="text/html" href="https://qubitpi.github.io/graphviz.github.io/docs/clusters/">
+<meta name="robots" content="noindex, nofollow">
+<link rel="shortcut icon" href="https://qubitpi.github.io/graphviz.github.io/Resources/favicon.png" >
+
+<title>Cluster Attributes | Graphviz</title>
+<meta name="description" content="Attributes you can set on subgraph clusters">
+<meta property="og:title" content="Cluster Attributes" />
+<meta property="og:description" content="Attributes you can set on subgraph clusters" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://qubitpi.github.io/graphviz.github.io/docs/clusters/" /><meta property="og:site_name" content="Graphviz" />
+<meta itemprop="name" content="Cluster Attributes">
+<meta itemprop="description" content="Attributes you can set on subgraph clusters"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cluster Attributes"/>
+<meta name="twitter:description" content="Attributes you can set on subgraph clusters"/>
+
+
+
+
+<link rel="preload" href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" as="style">
+<link href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://qubitpi.github.io/graphviz.github.io/css/prism.css"/>
+<link rel="canonical" href="https://qubitpi.github.io/graphviz.github.io/docs/clusters/">
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="https://qubitpi.github.io/graphviz.github.io/">
+		<span class="navbar-logo"></span><span class="font-weight-bold ">Graphviz</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/download/" ><i class='fas fa-download'></i><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="https://qubitpi.github.io/graphviz.github.io/documentation/" ><i class='fas fa-book'></i><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/gallery/" ><i class='fas fa-images'></i><span>Gallery</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://forum.graphviz.org/" target="_blank" ><i class='fab fa-discourse'></i><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://gitlab.com/graphviz/graphviz" target="_blank" ><i class='fab fa-gitlab'></i><span>GitLab</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"><input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="https://qubitpi.github.io/graphviz.github.io/offline-search-index.50bf51da3021df5a71952d71fe0a660e.json"
+  data-offline-search-base-href="https://qubitpi.github.io/graphviz.github.io/"
+  data-offline-search-max-results="10"
+>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+<div class="td-content">
+	<h1>Cluster Attributes</h1>
+	
+	<div class="lead">Attributes you can set on subgraph clusters</div>
+	
+	<p></p>
+	<ul>
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/area/">area</a>
+				 &ndash; 
+         Indicates the preferred area for a node or empty cluster.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/patchwork/">patchwork</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/bgcolor/">bgcolor</a>
+				 &ndash; 
+         Canvas background color.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/class/">class</a>
+				 &ndash; 
+         Classnames to attach to the node, edge, graph, or cluster's SVG element.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/cluster/">cluster</a>
+				 &ndash; 
+         Whether the subgraph is a cluster.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/color/">color</a>
+				 &ndash; 
+         Basic drawing color for graphics, not text.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/colorscheme/">colorscheme</a>
+				 &ndash; 
+         A color scheme namespace: the context for interpreting color names.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fillcolor/">fillcolor</a>
+				 &ndash; 
+         Color used to fill the background of a node or cluster.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fontcolor/">fontcolor</a>
+				 &ndash; 
+         Color used for text.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fontname/">fontname</a>
+				 &ndash; 
+         Font used for text.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fontsize/">fontsize</a>
+				 &ndash; 
+         Font size, <a href="https://qubitpi.github.io/graphviz.github.io/doc/info/attrs.html#points">in points</a>, used for text.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/gradientangle/">gradientangle</a>
+				 &ndash; 
+         If a gradient fill is being used, this determines the angle of the fill.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/href/">href</a>
+				 &ndash; 
+         Synonym for <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/URL"><code>URL</code></a>.
+				
+					For
+					map, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/ps/">postscript</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/id/">id</a>
+				 &ndash; 
+         Identifier for graph objects.
+				
+					For
+					map, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/ps/">postscript</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/K/">K</a>
+				 &ndash; 
+         Spring constant used in virtual physical model.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/label/">label</a>
+				 &ndash; 
+         Text label attached to objects.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/labeljust/">labeljust</a>
+				 &ndash; 
+         Justification for graph &amp; cluster labels.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/labelloc/">labelloc</a>
+				 &ndash; 
+         Vertical placement of labels for nodes, root graphs and clusters.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/layer/">layer</a>
+				 &ndash; 
+         Specifies layers in which the node, edge or cluster is present.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/lheight/">lheight</a>
+				 &ndash; 
+         Height of graph or cluster label, in inches.
+				
+					For
+					write only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/lp/">lp</a>
+				 &ndash; 
+         Label center position.
+				
+					For
+					write only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/lwidth/">lwidth</a>
+				 &ndash; 
+         Width of graph or cluster label, in inches.
+				
+					For
+					write only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/margin/">margin</a>
+				 &ndash; 
+         For graphs, this sets x and y margins of canvas, in inches.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/nojustify/">nojustify</a>
+				 &ndash; 
+         Whether to justify multiline text vs the previous text line (rather than the side of the container).
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pencolor/">pencolor</a>
+				 &ndash; 
+         Color used to draw the bounding box around a cluster.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/penwidth/">penwidth</a>
+				 &ndash; 
+         Specifies the width of the pen, in points, used to draw lines and curves.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/peripheries/">peripheries</a>
+				 &ndash; 
+         Set number of peripheries used in polygonal shapes and cluster boundaries.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/sortv/">sortv</a>
+				 &ndash; 
+         Sort order of graph components for ordering <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/packmode/"><code>packmode</code></a> packing.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/style/">style</a>
+				 &ndash; 
+         Set style information for components of the graph.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/target/">target</a>
+				 &ndash; 
+         If the object has a <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/URL/"><code>URL</code></a>, this attribute determines which window of the browser is used for the URL.
+				
+					For
+					map, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/tooltip/">tooltip</a>
+				 &ndash; 
+         Tooltip (mouse hover text) attached to the node, edge, cluster, or graph.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/cmap/">cmap</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/URL/">URL</a>
+				 &ndash; 
+         Hyperlinks incorporated into device-dependent output.
+				
+					For
+					map, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/ps/">postscript</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+	</ul>
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+  Last modified September 17, 2022: <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/commit/4f3efb66ba3b15f3a834dfcde13d7b4506c2572d">Update _index.md: clusters and subgraphs are different (4f3efb6)</a>
+</div>
+
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://forum.graphviz.org/" aria-label="User mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/graphviz" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/graphviz" aria-label="Stack Overflow">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitLab" aria-label="GitLab">
+    <a class="text-white" target="_blank" rel="noopener" href="https://gitlab.com/graphviz/graphviz" aria-label="GitLab">
+      <i class="fab fa-gitlab"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 The Graphviz Authors All Rights Reserved</small>
+        
+	
+		<p class="mt-2"><a href="https://qubitpi.github.io/graphviz.github.io/about/">About</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://qubitpi.github.io/graphviz.github.io/js/main.min.91798a335c881f1b6b805085ba4aa22d1dbd2b0b18d105d05189fa104ddae350.js" integrity="sha256-kXmKM1yIHxtrgFCFukqiLR29KwsY0QXQUYn6EE3a41A=" crossorigin="anonymous"></script>
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/prism.js'></script>
+
+
+
+  </body>
+</html>

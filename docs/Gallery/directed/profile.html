@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.109.0">
+<meta name="robots" content="index, follow">
+<link rel="shortcut icon" href="https://qubitpi.github.io/graphviz.github.io/Resources/favicon.png" >
+
+<title>Program Profile | Graphviz</title>
+<meta name="description" content="This is the dynamic profile of a sort program,
+generated from the gprof tool.  Nodes represent
+functions and edges represent function calls.
+They are …">
+<meta property="og:title" content="Program Profile" />
+<meta property="og:description" content="This is the dynamic profile of a sort program, generated from the gprof tool. Nodes represent functions and edges represent function calls. They are colored according to gprof&#39;s estimate of the time spent within a given function and the time charged to a given call site. The colors are encoded as hue-saturation-brightness triples. We have found it advantageous to vary both hue and saturation to draw attention to hot spots, rather than present a baffling rainbow of colors." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/profile.html" /><meta property="article:section" content="Gallery" />
+
+<meta property="article:modified_time" content="2021-05-10T20:26:52+10:00" /><meta property="og:site_name" content="Graphviz" />
+<meta itemprop="name" content="Program Profile">
+<meta itemprop="description" content="This is the dynamic profile of a sort program, generated from the gprof tool. Nodes represent functions and edges represent function calls. They are colored according to gprof&#39;s estimate of the time spent within a given function and the time charged to a given call site. The colors are encoded as hue-saturation-brightness triples. We have found it advantageous to vary both hue and saturation to draw attention to hot spots, rather than present a baffling rainbow of colors.">
+<meta itemprop="dateModified" content="2021-05-10T20:26:52+10:00" />
+<meta itemprop="wordCount" content="78">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Program Profile"/>
+<meta name="twitter:description" content="This is the dynamic profile of a sort program, generated from the gprof tool. Nodes represent functions and edges represent function calls. They are colored according to gprof&#39;s estimate of the time spent within a given function and the time charged to a given call site. The colors are encoded as hue-saturation-brightness triples. We have found it advantageous to vary both hue and saturation to draw attention to hot spots, rather than present a baffling rainbow of colors."/>
+
+
+
+
+<link rel="preload" href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" as="style">
+<link href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://qubitpi.github.io/graphviz.github.io/css/prism.css"/>
+<link rel="canonical" href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/profile.html">
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="https://qubitpi.github.io/graphviz.github.io/">
+		<span class="navbar-logo"></span><span class="font-weight-bold ">Graphviz</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/download/" ><i class='fas fa-download'></i><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/documentation/" ><i class='fas fa-book'></i><span>Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="https://qubitpi.github.io/graphviz.github.io/gallery/" ><i class='fas fa-images'></i><span class="active">Gallery</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://forum.graphviz.org/" target="_blank" ><i class='fab fa-discourse'></i><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://gitlab.com/graphviz/graphviz" target="_blank" ><i class='fab fa-gitlab'></i><span>GitLab</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"><input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="https://qubitpi.github.io/graphviz.github.io/offline-search-index.50bf51da3021df5a71952d71fe0a660e.json"
+  data-offline-search-base-href="https://qubitpi.github.io/graphviz.github.io/"
+  data-offline-search-max-results="10"
+>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+  <script>
+    $(function() {
+    $("#td-section-nav a").removeClass("active");
+    $("#td-section-nav #m-gallerydirectedprofilehtml").addClass("active"); 
+    $("#td-section-nav #m-gallerydirectedprofilehtml-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-gallerydirectedprofilehtml").parents("li").addClass("active-path"); 
+    $("#td-section-nav li.active-path").addClass("show"); 
+    $("#td-section-nav li.active-path").children("input").prop('checked', true);
+    $("#td-section-nav #m-gallerydirectedprofilehtml-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-gallerydirectedprofilehtml-li").children("ul").children("li").addClass("show");  
+    $("#td-sidebar-menu").toggleClass("d-none"); 
+    });
+  </script>
+  
+<div id="td-sidebar-menu" class="td-sidebar__inner d-none">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="https://qubitpi.github.io/graphviz.github.io/offline-search-index.50bf51da3021df5a71952d71fe0a660e.json"
+  data-offline-search-base-href="https://qubitpi.github.io/graphviz.github.io/"
+  data-offline-search-max-results="10"
+>
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-gallery-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/gallery/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-gallery"><span class="">Gallery</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-gallerydirected-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-gallerydirected"><span class="">Directed Graphs</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedgithtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/git.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedgithtml"><span class="">Basic Git Concepts and Operations</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedbazelhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/bazel.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedbazelhtml"><span class="">Bazel Build System</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedclusterhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/cluster.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedclusterhtml"><span class="">Clusters</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirecteddatastructhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/datastruct.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirecteddatastructhtml"><span class="">Data Structures</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedkennedyanchtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/kennedyanc.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedkennedyanchtml"><span class="">Family Tree</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedfsmhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/fsm.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedfsmhtml"><span class="">Finite Automaton</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedgo-packagehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/go-package.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedgo-packagehtml"><span class="">Go Package Imports</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedhellohtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/hello.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedhellohtml"><span class="">Hello World</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedlinux_kernel_diagramhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/Linux_kernel_diagram.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedlinux_kernel_diagramhtml"><span class="">Linux Kernel Diagram</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedgenetic_programminghtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/Genetic_Programming.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedgenetic_programminghtml"><span class="">Math Parse Tree</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedneural-networkhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/neural-network.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedneural-networkhtml"><span class="">Neural Network (Keras)</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedninjahtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/ninja.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedninjahtml"><span class="">Ninja Build System</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedpsghtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/psg.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedpsghtml"><span class="">Parsing tree</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedcrazyhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/crazy.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedcrazyhtml"><span class="">Polygons</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedpprofhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/pprof.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedpprofhtml"><span class="">pprof CPU Profile</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedprofilehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/profile.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedprofilehtml"><span class="">Program Profile</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedlion_sharehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/lion_share.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedlion_sharehtml"><span class="">Racehorse Pedigree</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedsiblingshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/siblings.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedsiblingshtml"><span class="">Siblings</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedswitchhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/switch.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedswitchhtml"><span class="">Switch Network</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedsdhhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/sdh.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedsdhhtml"><span class="">Synchronous Digital Hierarchy</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirecteduml_class_diagramhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/UML_Class_diagram.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirecteduml_class_diagramhtml"><span class="">UML Class diagram demo</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedunixhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/unix.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedunixhtml"><span class="">UNIX Family &#39;Tree&#39;</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedworldhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/world.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedworldhtml"><span class="">World Dynamics</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-galleryneato-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-galleryneato"><span class="">Neato Spring Graphs</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatocolor_wheelhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/color_wheel.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatocolor_wheelhtml"><span class="">Color wheel, 33 colors. Neato layout</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatoerhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/ER.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatoerhtml"><span class="">Entity-Relation Data Model</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatosoftmainthtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/softmaint.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatosoftmainthtml"><span class="">Module Dependencies</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatotransparencyhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/transparency.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatotransparencyhtml"><span class="">Partially Transparent Colors</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatophilohtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/philo.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatophilohtml"><span class="">Philosophers dilemma. Neato layout.</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatoprocesshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/process.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatoprocesshtml"><span class="">Process</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatotraffic_lightshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/traffic_lights.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatotraffic_lightshtml"><span class="">Traffic Lights</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatocolorshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/colors.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatocolorshtml"><span class="">Twelve colors, neato layout</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-galleryundirected-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-galleryundirected"><span class="">Undirected Graphs</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryundirectedgd_1994_2007html-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/gd_1994_2007.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedgd_1994_2007html"><span class="">Cluster relations in a graph highlighted using gvmap</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryundirectedgridhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/grid.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedgridhtml"><span class="">Grid</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-galleryundirectedsave-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/save/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-galleryundirectedsave"><span class="">Save</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-galleryundirectedsaveinethtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/save/inet.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedsaveinethtml"><span class="">Intranet Layout</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryundirectedfdpclusthtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/fdpclust.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedfdpclusthtml"><span class="">Undirected Graph Clusters</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryundirectedroothtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/root.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedroothtml"><span class="">Undirected Large Graph Layout Using sfdp</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-gallerytwopi-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-gallerytwopi"><span class="">Twopi Radial Graphs</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerytwopitwopi2html-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/twopi2.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerytwopitwopi2html"><span class="">A Network Map</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerytwopihappinesshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/happiness.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerytwopihappinesshtml"><span class="">Mind map of Happiness</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerytwopinetworkmap_twopihtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/networkmap_twopi.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerytwopinetworkmap_twopihtml"><span class="">Network Map by Pandora FMS</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-gallerygradient-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-gallerygradient"><span class="">Color Gradients</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientclusterhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/cluster.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientclusterhtml"><span class="">Cluster Gradients</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientlinear_anglehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/linear_angle.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientlinear_anglehtml"><span class="">Gradient Linear Angles</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientradial_anglehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/radial_angle.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientradial_anglehtml"><span class="">Gradient Radial Angles</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientdatastructhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/datastruct.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientdatastructhtml"><span class="">Gradients Applied to Data Struct Example</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientg_c_nhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/g_c_n.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientg_c_nhtml"><span class="">Graph, Cluster and Node Gradients</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientangleshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/angles.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientangleshtml"><span class="">Linear and Radial Gradient Angles</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientcolorshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/colors.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientcolorshtml"><span class="">Sample Gradient Color Schemes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradienttablehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/table.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradienttablehtml"><span class="">Table and Cell Gradients</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href="https://gitlab.com/graphviz/graphviz.gitlab.io/tree/main/content/en/Gallery/directed/profile.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+  <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/edit/main/content/en/Gallery/directed/profile.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+  <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/new/main/content/en/Gallery/directed/profile.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+  <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/issues/new?title=Program%20Profile" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+  <a id="print" href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            
+
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://qubitpi.github.io/graphviz.github.io/gallery/">Gallery</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/">Directed Graphs</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/profile.html">Program Profile</a>
+  </li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Program Profile</h1>
+  
+	
+	<p>This is the dynamic profile of a sort program,
+generated from the <code>gprof</code> tool.  Nodes represent
+functions and edges represent function calls.
+They are colored according to gprof's estimate
+of the time spent within a given function and
+the time charged to a given call site.
+The colors are encoded as hue-saturation-brightness
+triples.  We have found it advantageous to vary both
+hue and saturation to draw attention to hot spots,
+rather than present a baffling rainbow of colors.</p>
+
+  <p>
+    <a href="profile.svg">
+    <img style="max-width:100%;" src="profile.svg">
+    </a>
+  </p>
+  <p>
+  [<a href="profile.gv.txt">Input .gv File</a>]
+  [<a href="profile.svg">SVG</a>]
+  [<a href="profile.png">Raster Image</a>]
+  </p>
+  
+  
+<div class="card mb-4">
+  
+    <div class="card-header">
+      
+        profile.gv.txt
+      
+    </div>
+  
+  <div class="card-body">
+    
+    <pre tabindex="0"><code class="language-dot" data-lang="dot">digraph prof {
+	fontname=&#34;Helvetica,Arial,sans-serif&#34;
+	node [fontname=&#34;Helvetica,Arial,sans-serif&#34;]
+	edge [fontname=&#34;Helvetica,Arial,sans-serif&#34;]
+	node [style=filled];
+	start -&gt; main [color=&#34;0.002 0.999 0.999&#34;];
+	start -&gt; on_exit [color=&#34;0.649 0.701 0.701&#34;];
+	main -&gt; sort [color=&#34;0.348 0.839 0.839&#34;];
+	main -&gt; merge [color=&#34;0.515 0.762 0.762&#34;];
+	main -&gt; term [color=&#34;0.647 0.702 0.702&#34;];
+	main -&gt; signal [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; sbrk [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; unlink [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; newfile [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; fclose [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; close [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; brk [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; setbuf [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; copyproto [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; initree [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; safeoutfil [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; getpid [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; sprintf [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; creat [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; rem [color=&#34;0.650 0.700 0.700&#34;];
+	main -&gt; oldfile [color=&#34;0.650 0.700 0.700&#34;];
+	sort -&gt; msort [color=&#34;0.619 0.714 0.714&#34;];
+	sort -&gt; filbuf [color=&#34;0.650 0.700 0.700&#34;];
+	sort -&gt; newfile [color=&#34;0.650 0.700 0.700&#34;];
+	sort -&gt; fclose [color=&#34;0.650 0.700 0.700&#34;];
+	sort -&gt; setbuf [color=&#34;0.650 0.700 0.700&#34;];
+	sort -&gt; setfil [color=&#34;0.650 0.700 0.700&#34;];
+	msort -&gt; qsort [color=&#34;0.650 0.700 0.700&#34;];
+	msort -&gt; insert [color=&#34;0.650 0.700 0.700&#34;];
+	msort -&gt; wline [color=&#34;0.650 0.700 0.700&#34;];
+	msort -&gt; div [color=&#34;0.650 0.700 0.700&#34;];
+	msort -&gt; cmpsave [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; insert [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; rline [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; wline [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; unlink [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; fopen [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; fclose [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; setfil [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; mul [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; setbuf [color=&#34;0.650 0.700 0.700&#34;];
+	merge -&gt; cmpsave [color=&#34;0.650 0.700 0.700&#34;];
+	insert -&gt; cmpa [color=&#34;0.650 0.700 0.700&#34;];
+	wline -&gt; flsbuf [color=&#34;0.649 0.700 0.700&#34;];
+	qsort -&gt; cmpa [color=&#34;0.650 0.700 0.700&#34;];
+	rline -&gt; filbuf [color=&#34;0.649 0.700 0.700&#34;];
+	xflsbuf -&gt; write [color=&#34;0.650 0.700 0.700&#34;];
+	flsbuf -&gt; xflsbuf [color=&#34;0.649 0.700 0.700&#34;];
+	filbuf -&gt; read [color=&#34;0.650 0.700 0.700&#34;];
+	term -&gt; unlink [color=&#34;0.650 0.700 0.700&#34;];
+	term -&gt; signal [color=&#34;0.650 0.700 0.700&#34;];
+	term -&gt; setfil [color=&#34;0.650 0.700 0.700&#34;];
+	term -&gt; exit [color=&#34;0.650 0.700 0.700&#34;];
+	endopen -&gt; open [color=&#34;0.650 0.700 0.700&#34;];
+	fopen -&gt; endopen [color=&#34;0.639 0.705 0.705&#34;];
+	fopen -&gt; findiop [color=&#34;0.650 0.700 0.700&#34;];
+	newfile -&gt; fopen [color=&#34;0.634 0.707 0.707&#34;];
+	newfile -&gt; setfil [color=&#34;0.650 0.700 0.700&#34;];
+	fclose -&gt; fflush [color=&#34;0.642 0.704 0.704&#34;];
+	fclose -&gt; close [color=&#34;0.650 0.700 0.700&#34;];
+	fflush -&gt; xflsbuf [color=&#34;0.635 0.707 0.707&#34;];
+	malloc -&gt; morecore [color=&#34;0.325 0.850 0.850&#34;];
+	malloc -&gt; demote [color=&#34;0.650 0.700 0.700&#34;];
+	morecore -&gt; sbrk [color=&#34;0.650 0.700 0.700&#34;];
+	morecore -&gt; getfreehdr [color=&#34;0.650 0.700 0.700&#34;];
+	morecore -&gt; free [color=&#34;0.650 0.700 0.700&#34;];
+	morecore -&gt; getpagesize [color=&#34;0.650 0.700 0.700&#34;];
+	morecore -&gt; putfreehdr [color=&#34;0.650 0.700 0.700&#34;];
+	morecore -&gt; udiv [color=&#34;0.650 0.700 0.700&#34;];
+	morecore -&gt; umul [color=&#34;0.650 0.700 0.700&#34;];
+	on_exit -&gt; malloc [color=&#34;0.325 0.850 0.850&#34;];
+	signal -&gt; sigvec [color=&#34;0.650 0.700 0.700&#34;];
+	moncontrol -&gt; profil [color=&#34;0.650 0.700 0.700&#34;];
+	getfreehdr -&gt; sbrk [color=&#34;0.650 0.700 0.700&#34;];
+	free -&gt; insert [color=&#34;0.650 0.700 0.700&#34;];
+	insert -&gt; getfreehdr [color=&#34;0.650 0.700 0.700&#34;];
+	setfil -&gt; div [color=&#34;0.650 0.700 0.700&#34;];
+	setfil -&gt; rem [color=&#34;0.650 0.700 0.700&#34;];
+	sigvec -&gt; sigblock [color=&#34;0.650 0.700 0.700&#34;];
+	sigvec -&gt; sigsetmask [color=&#34;0.650 0.700 0.700&#34;];
+	doprnt -&gt; urem [color=&#34;0.650 0.700 0.700&#34;];
+	doprnt -&gt; udiv [color=&#34;0.650 0.700 0.700&#34;];
+	doprnt -&gt; strlen [color=&#34;0.650 0.700 0.700&#34;];
+	doprnt -&gt; localeconv [color=&#34;0.650 0.700 0.700&#34;];
+	sprintf -&gt; doprnt [color=&#34;0.650 0.700 0.700&#34;];
+cmpa [color=&#34;0.000 1.000 1.000&#34;];
+wline [color=&#34;0.201 0.753 1.000&#34;];
+insert [color=&#34;0.305 0.625 1.000&#34;];
+rline [color=&#34;0.355 0.563 1.000&#34;];
+sort [color=&#34;0.408 0.498 1.000&#34;];
+qsort [color=&#34;0.449 0.447 1.000&#34;];
+write [color=&#34;0.499 0.386 1.000&#34;];
+read [color=&#34;0.578 0.289 1.000&#34;];
+msort [color=&#34;0.590 0.273 1.000&#34;];
+merge [color=&#34;0.603 0.258 1.000&#34;];
+unlink [color=&#34;0.628 0.227 1.000&#34;];
+filbuf [color=&#34;0.641 0.212 1.000&#34;];
+open [color=&#34;0.641 0.212 1.000&#34;];
+sbrk [color=&#34;0.647 0.204 1.000&#34;];
+signal [color=&#34;0.647 0.204 1.000&#34;];
+moncontrol [color=&#34;0.647 0.204 1.000&#34;];
+xflsbuf [color=&#34;0.650 0.200 1.000&#34;];
+flsbuf [color=&#34;0.650 0.200 1.000&#34;];
+div [color=&#34;0.650 0.200 1.000&#34;];
+cmpsave [color=&#34;0.650 0.200 1.000&#34;];
+rem [color=&#34;0.650 0.200 1.000&#34;];
+setfil [color=&#34;0.650 0.200 1.000&#34;];
+close [color=&#34;0.650 0.200 1.000&#34;];
+fclose [color=&#34;0.650 0.200 1.000&#34;];
+fflush [color=&#34;0.650 0.200 1.000&#34;];
+setbuf [color=&#34;0.650 0.200 1.000&#34;];
+endopen [color=&#34;0.650 0.200 1.000&#34;];
+findiop [color=&#34;0.650 0.200 1.000&#34;];
+fopen [color=&#34;0.650 0.200 1.000&#34;];
+mul [color=&#34;0.650 0.200 1.000&#34;];
+newfile [color=&#34;0.650 0.200 1.000&#34;];
+sigblock [color=&#34;0.650 0.200 1.000&#34;];
+sigsetmask [color=&#34;0.650 0.200 1.000&#34;];
+sigvec [color=&#34;0.650 0.200 1.000&#34;];
+udiv [color=&#34;0.650 0.200 1.000&#34;];
+urem [color=&#34;0.650 0.200 1.000&#34;];
+brk [color=&#34;0.650 0.200 1.000&#34;];
+getfreehdr [color=&#34;0.650 0.200 1.000&#34;];
+strlen [color=&#34;0.650 0.200 1.000&#34;];
+umul [color=&#34;0.650 0.200 1.000&#34;];
+doprnt [color=&#34;0.650 0.200 1.000&#34;];
+copyproto [color=&#34;0.650 0.200 1.000&#34;];
+creat [color=&#34;0.650 0.200 1.000&#34;];
+demote [color=&#34;0.650 0.200 1.000&#34;];
+exit [color=&#34;0.650 0.200 1.000&#34;];
+free [color=&#34;0.650 0.200 1.000&#34;];
+getpagesize [color=&#34;0.650 0.200 1.000&#34;];
+getpid [color=&#34;0.650 0.200 1.000&#34;];
+initree [color=&#34;0.650 0.200 1.000&#34;];
+insert [color=&#34;0.650 0.200 1.000&#34;];
+localeconv [color=&#34;0.650 0.200 1.000&#34;];
+main [color=&#34;0.650 0.200 1.000&#34;];
+malloc [color=&#34;0.650 0.200 1.000&#34;];
+morecore [color=&#34;0.650 0.200 1.000&#34;];
+oldfile [color=&#34;0.650 0.200 1.000&#34;];
+on_exit [color=&#34;0.650 0.200 1.000&#34;];
+profil [color=&#34;0.650 0.200 1.000&#34;];
+putfreehdr [color=&#34;0.650 0.200 1.000&#34;];
+safeoutfil [color=&#34;0.650 0.200 1.000&#34;];
+sprintf [color=&#34;0.650 0.200 1.000&#34;];
+term [color=&#34;0.650 0.200 1.000&#34;];
+}</code></pre></div>
+  <div class="card-footer">
+    <a href="http://magjac.com/graphviz-visual-editor/?dot=digraph%20prof%20%7b%0a%09fontname%3d%22Helvetica%2cArial%2csans-serif%22%0a%09node%20%5bfontname%3d%22Helvetica%2cArial%2csans-serif%22%5d%0a%09edge%20%5bfontname%3d%22Helvetica%2cArial%2csans-serif%22%5d%0a%09node%20%5bstyle%3dfilled%5d%3b%0a%09start%20-%3e%20main%20%5bcolor%3d%220.002%200.999%200.999%22%5d%3b%0a%09start%20-%3e%20on_exit%20%5bcolor%3d%220.649%200.701%200.701%22%5d%3b%0a%09main%20-%3e%20sort%20%5bcolor%3d%220.348%200.839%200.839%22%5d%3b%0a%09main%20-%3e%20merge%20%5bcolor%3d%220.515%200.762%200.762%22%5d%3b%0a%09main%20-%3e%20term%20%5bcolor%3d%220.647%200.702%200.702%22%5d%3b%0a%09main%20-%3e%20signal%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20sbrk%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20unlink%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20newfile%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20fclose%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20close%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20brk%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20setbuf%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20copyproto%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20initree%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20safeoutfil%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20getpid%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20sprintf%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20creat%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20rem%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09main%20-%3e%20oldfile%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09sort%20-%3e%20msort%20%5bcolor%3d%220.619%200.714%200.714%22%5d%3b%0a%09sort%20-%3e%20filbuf%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09sort%20-%3e%20newfile%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09sort%20-%3e%20fclose%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09sort%20-%3e%20setbuf%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09sort%20-%3e%20setfil%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09msort%20-%3e%20qsort%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09msort%20-%3e%20insert%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09msort%20-%3e%20wline%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09msort%20-%3e%20div%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09msort%20-%3e%20cmpsave%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20insert%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20rline%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20wline%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20unlink%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20fopen%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20fclose%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20setfil%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20mul%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20setbuf%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09merge%20-%3e%20cmpsave%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09insert%20-%3e%20cmpa%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09wline%20-%3e%20flsbuf%20%5bcolor%3d%220.649%200.700%200.700%22%5d%3b%0a%09qsort%20-%3e%20cmpa%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09rline%20-%3e%20filbuf%20%5bcolor%3d%220.649%200.700%200.700%22%5d%3b%0a%09xflsbuf%20-%3e%20write%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09flsbuf%20-%3e%20xflsbuf%20%5bcolor%3d%220.649%200.700%200.700%22%5d%3b%0a%09filbuf%20-%3e%20read%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09term%20-%3e%20unlink%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09term%20-%3e%20signal%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09term%20-%3e%20setfil%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09term%20-%3e%20exit%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09endopen%20-%3e%20open%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09fopen%20-%3e%20endopen%20%5bcolor%3d%220.639%200.705%200.705%22%5d%3b%0a%09fopen%20-%3e%20findiop%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09newfile%20-%3e%20fopen%20%5bcolor%3d%220.634%200.707%200.707%22%5d%3b%0a%09newfile%20-%3e%20setfil%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09fclose%20-%3e%20fflush%20%5bcolor%3d%220.642%200.704%200.704%22%5d%3b%0a%09fclose%20-%3e%20close%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09fflush%20-%3e%20xflsbuf%20%5bcolor%3d%220.635%200.707%200.707%22%5d%3b%0a%09malloc%20-%3e%20morecore%20%5bcolor%3d%220.325%200.850%200.850%22%5d%3b%0a%09malloc%20-%3e%20demote%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09morecore%20-%3e%20sbrk%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09morecore%20-%3e%20getfreehdr%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09morecore%20-%3e%20free%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09morecore%20-%3e%20getpagesize%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09morecore%20-%3e%20putfreehdr%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09morecore%20-%3e%20udiv%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09morecore%20-%3e%20umul%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09on_exit%20-%3e%20malloc%20%5bcolor%3d%220.325%200.850%200.850%22%5d%3b%0a%09signal%20-%3e%20sigvec%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09moncontrol%20-%3e%20profil%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09getfreehdr%20-%3e%20sbrk%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09free%20-%3e%20insert%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09insert%20-%3e%20getfreehdr%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09setfil%20-%3e%20div%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09setfil%20-%3e%20rem%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09sigvec%20-%3e%20sigblock%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09sigvec%20-%3e%20sigsetmask%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09doprnt%20-%3e%20urem%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09doprnt%20-%3e%20udiv%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09doprnt%20-%3e%20strlen%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09doprnt%20-%3e%20localeconv%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0a%09sprintf%20-%3e%20doprnt%20%5bcolor%3d%220.650%200.700%200.700%22%5d%3b%0acmpa%20%5bcolor%3d%220.000%201.000%201.000%22%5d%3b%0awline%20%5bcolor%3d%220.201%200.753%201.000%22%5d%3b%0ainsert%20%5bcolor%3d%220.305%200.625%201.000%22%5d%3b%0arline%20%5bcolor%3d%220.355%200.563%201.000%22%5d%3b%0asort%20%5bcolor%3d%220.408%200.498%201.000%22%5d%3b%0aqsort%20%5bcolor%3d%220.449%200.447%201.000%22%5d%3b%0awrite%20%5bcolor%3d%220.499%200.386%201.000%22%5d%3b%0aread%20%5bcolor%3d%220.578%200.289%201.000%22%5d%3b%0amsort%20%5bcolor%3d%220.590%200.273%201.000%22%5d%3b%0amerge%20%5bcolor%3d%220.603%200.258%201.000%22%5d%3b%0aunlink%20%5bcolor%3d%220.628%200.227%201.000%22%5d%3b%0afilbuf%20%5bcolor%3d%220.641%200.212%201.000%22%5d%3b%0aopen%20%5bcolor%3d%220.641%200.212%201.000%22%5d%3b%0asbrk%20%5bcolor%3d%220.647%200.204%201.000%22%5d%3b%0asignal%20%5bcolor%3d%220.647%200.204%201.000%22%5d%3b%0amoncontrol%20%5bcolor%3d%220.647%200.204%201.000%22%5d%3b%0axflsbuf%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aflsbuf%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0adiv%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0acmpsave%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0arem%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0asetfil%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aclose%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0afclose%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0afflush%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0asetbuf%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aendopen%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0afindiop%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0afopen%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0amul%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0anewfile%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0asigblock%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0asigsetmask%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0asigvec%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0audiv%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aurem%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0abrk%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0agetfreehdr%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0astrlen%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aumul%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0adoprnt%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0acopyproto%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0acreat%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0ademote%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aexit%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0afree%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0agetpagesize%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0agetpid%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0ainitree%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0ainsert%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0alocaleconv%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0amain%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0amalloc%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0amorecore%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aoldfile%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aon_exit%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aprofil%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aputfreehdr%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0asafeoutfil%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0asprintf%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0aterm%20%5bcolor%3d%220.650%200.200%201.000%22%5d%3b%0a%7d" target="_blank"><i class="fa fa-external-link-alt"></i> Edit in Playground</a>
+    
+  </div>
+</div>
+
+	
+	
+  <p>Copyright © 1996-2004 AT&amp;T.  All rights reserved.</p>
+	<div class="text-muted mt-5 pt-3 border-top">
+  Last modified May 10, 2021: <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/commit/164fb412c4653a5e03f1e77c5e4362fe2dc5e5a2">Move gallery to Docsy (164fb41)</a>
+</div>
+
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://forum.graphviz.org/" aria-label="User mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/graphviz" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/graphviz" aria-label="Stack Overflow">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitLab" aria-label="GitLab">
+    <a class="text-white" target="_blank" rel="noopener" href="https://gitlab.com/graphviz/graphviz" aria-label="GitLab">
+      <i class="fab fa-gitlab"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 The Graphviz Authors All Rights Reserved</small>
+        
+	
+		<p class="mt-2"><a href="https://qubitpi.github.io/graphviz.github.io/about/">About</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://qubitpi.github.io/graphviz.github.io/js/main.min.91798a335c881f1b6b805085ba4aa22d1dbd2b0b18d105d05189fa104ddae350.js" integrity="sha256-kXmKM1yIHxtrgFCFukqiLR29KwsY0QXQUYn6EE3a41A=" crossorigin="anonymous"></script>
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/prism.js'></script>
+
+
+
+  </body>
+</html>

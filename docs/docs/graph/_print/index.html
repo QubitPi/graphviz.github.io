@@ -1,0 +1,1511 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.109.0">
+<link rel="canonical" type="text/html" href="https://qubitpi.github.io/graphviz.github.io/docs/graph/">
+<meta name="robots" content="noindex, nofollow">
+<link rel="shortcut icon" href="https://qubitpi.github.io/graphviz.github.io/Resources/favicon.png" >
+
+<title>Graph Attributes | Graphviz</title>
+<meta name="description" content="Attributes you can set on graphs">
+<meta property="og:title" content="Graph Attributes" />
+<meta property="og:description" content="Attributes you can set on graphs" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://qubitpi.github.io/graphviz.github.io/docs/graph/" /><meta property="og:site_name" content="Graphviz" />
+<meta itemprop="name" content="Graph Attributes">
+<meta itemprop="description" content="Attributes you can set on graphs"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Graph Attributes"/>
+<meta name="twitter:description" content="Attributes you can set on graphs"/>
+
+
+
+
+<link rel="preload" href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" as="style">
+<link href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://qubitpi.github.io/graphviz.github.io/css/prism.css"/>
+<link rel="canonical" href="https://qubitpi.github.io/graphviz.github.io/docs/graph/">
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="https://qubitpi.github.io/graphviz.github.io/">
+		<span class="navbar-logo"></span><span class="font-weight-bold ">Graphviz</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/download/" ><i class='fas fa-download'></i><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="https://qubitpi.github.io/graphviz.github.io/documentation/" ><i class='fas fa-book'></i><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/gallery/" ><i class='fas fa-images'></i><span>Gallery</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://forum.graphviz.org/" target="_blank" ><i class='fab fa-discourse'></i><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://gitlab.com/graphviz/graphviz" target="_blank" ><i class='fab fa-gitlab'></i><span>GitLab</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"><input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="https://qubitpi.github.io/graphviz.github.io/offline-search-index.50bf51da3021df5a71952d71fe0a660e.json"
+  data-offline-search-base-href="https://qubitpi.github.io/graphviz.github.io/"
+  data-offline-search-max-results="10"
+>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+<div class="td-content">
+	<h1>Graph Attributes</h1>
+	
+	<div class="lead">Attributes you can set on graphs</div>
+	
+	<p></p>
+	<ul>
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/background/">_background</a>
+				 &ndash; 
+         A string in the <a href="https://qubitpi.github.io/graphviz.github.io/docs/attr-types/xdot/"><code>xdot</code> format</a> specifying an arbitrary background.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/bb/">bb</a>
+				 &ndash; 
+         Bounding box of drawing in points.
+				
+					For
+					write only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/beautify/">beautify</a>
+				 &ndash; 
+         Whether to draw leaf nodes uniformly in a circle around the root node in sfdp.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/bgcolor/">bgcolor</a>
+				 &ndash; 
+         Canvas background color.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/center/">center</a>
+				 &ndash; 
+         Whether to center the drawing in the output canvas.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/charset/">charset</a>
+				 &ndash; 
+         Character encoding used when interpreting string input as a text label.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/class/">class</a>
+				 &ndash; 
+         Classnames to attach to the node, edge, graph, or cluster's SVG element.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/clusterrank/">clusterrank</a>
+				 &ndash; 
+         Mode used for handling clusters.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/colorscheme/">colorscheme</a>
+				 &ndash; 
+         A color scheme namespace: the context for interpreting color names.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/comment/">comment</a>
+				 &ndash; 
+         Comments are inserted into output.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/compound/">compound</a>
+				 &ndash; 
+         If true, allow edges between clusters.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/concentrate/">concentrate</a>
+				 &ndash; 
+         If true, use edge concentrators.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/Damping/">Damping</a>
+				 &ndash; 
+         Factor damping force motions.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/defaultdist/">defaultdist</a>
+				 &ndash; 
+         The distance between nodes in separate connected components.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dim/">dim</a>
+				 &ndash; 
+         Set the number of dimensions used for the layout.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dimen/">dimen</a>
+				 &ndash; 
+         Set the number of dimensions used for rendering.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/diredgeconstraints/">diredgeconstraints</a>
+				 &ndash; 
+         Whether to constrain most edges to point downwards.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dpi/">dpi</a>
+				 &ndash; 
+         Specifies the expected number of pixels per inch on a display device.
+				
+					For
+					bitmap output, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/epsilon/">epsilon</a>
+				 &ndash; 
+         Terminating condition.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/esep/">esep</a>
+				 &ndash; 
+         Margin used around polygons for purposes of spline edge routing.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fontcolor/">fontcolor</a>
+				 &ndash; 
+         Color used for text.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fontname/">fontname</a>
+				 &ndash; 
+         Font used for text.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fontnames/">fontnames</a>
+				 &ndash; 
+         Allows user control of how basic fontnames are represented in SVG output.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fontpath/">fontpath</a>
+				 &ndash; 
+         Directory list used by <a href="https://libgd.github.io/">libgd</a> to search for bitmap fonts.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/fontsize/">fontsize</a>
+				 &ndash; 
+         Font size, <a href="https://qubitpi.github.io/graphviz.github.io/doc/info/attrs.html#points">in points</a>, used for text.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/forcelabels/">forcelabels</a>
+				 &ndash; 
+         Whether to force placement of all <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/xlabel/"><code>xlabels</code></a>, even if overlapping.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/gradientangle/">gradientangle</a>
+				 &ndash; 
+         If a gradient fill is being used, this determines the angle of the fill.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/href/">href</a>
+				 &ndash; 
+         Synonym for <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/URL"><code>URL</code></a>.
+				
+					For
+					map, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/ps/">postscript</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/id/">id</a>
+				 &ndash; 
+         Identifier for graph objects.
+				
+					For
+					map, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/ps/">postscript</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/imagepath/">imagepath</a>
+				 &ndash; 
+         A list of directories in which to look for image files.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/inputscale/">inputscale</a>
+				 &ndash; 
+         Scales the input <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pos/">positions</a> to convert between length units.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/K/">K</a>
+				 &ndash; 
+         Spring constant used in virtual physical model.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/label/">label</a>
+				 &ndash; 
+         Text label attached to objects.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/label_scheme/">label_scheme</a>
+				 &ndash; 
+         Whether to treat a node whose name has the form <code>|edgelabel|*</code> as a special node representing an edge label.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/labeljust/">labeljust</a>
+				 &ndash; 
+         Justification for graph &amp; cluster labels.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/labelloc/">labelloc</a>
+				 &ndash; 
+         Vertical placement of labels for nodes, root graphs and clusters.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/landscape/">landscape</a>
+				 &ndash; 
+         If true, the graph is rendered in landscape mode.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/layerlistsep/">layerlistsep</a>
+				 &ndash; 
+         The separator characters used to split attributes of type <a href="https://qubitpi.github.io/graphviz.github.io/docs/attr-types/layerRange/"><code>layerRange</code></a> into a list of ranges.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/layers/">layers</a>
+				 &ndash; 
+         A linearly ordered list of layer names attached to the graph.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/layerselect/">layerselect</a>
+				 &ndash; 
+         Selects a list of layers to be emitted.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/layersep/">layersep</a>
+				 &ndash; 
+         The separator characters for splitting the <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/layers/"><code>layers</code></a> attribute into a list of layer names.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/layout/">layout</a>
+				 &ndash; 
+         Which <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/">layout engine</a> to use.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/levels/">levels</a>
+				 &ndash; 
+         Number of levels allowed in the multilevel scheme.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/levelsgap/">levelsgap</a>
+				 &ndash; 
+         strictness of neato level constraints.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/lheight/">lheight</a>
+				 &ndash; 
+         Height of graph or cluster label, in inches.
+				
+					For
+					write only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/linelength/">linelength</a>
+				 &ndash; 
+         How long strings should get before overflowing to next line, for text output.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/lp/">lp</a>
+				 &ndash; 
+         Label center position.
+				
+					For
+					write only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/lwidth/">lwidth</a>
+				 &ndash; 
+         Width of graph or cluster label, in inches.
+				
+					For
+					write only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/margin/">margin</a>
+				 &ndash; 
+         For graphs, this sets x and y margins of canvas, in inches.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/maxiter/">maxiter</a>
+				 &ndash; 
+         Sets the number of iterations used.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/mclimit/">mclimit</a>
+				 &ndash; 
+         Scale factor for mincross (mc) edge crossing minimiser parameters.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/mindist/">mindist</a>
+				 &ndash; 
+         Specifies the minimum separation between all nodes.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/circo/">circo</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/mode/">mode</a>
+				 &ndash; 
+         Technique for optimizing the layout.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/model/">model</a>
+				 &ndash; 
+         Specifies how the distance matrix is computed for the input graph.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/newrank/">newrank</a>
+				 &ndash; 
+         Whether to use a single global ranking, ignoring clusters.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/nodesep/">nodesep</a>
+				 &ndash; 
+         In <code>dot</code>, <code>nodesep</code> specifies the minimum space between two adjacent nodes in the same rank, in inches.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/nojustify/">nojustify</a>
+				 &ndash; 
+         Whether to justify multiline text vs the previous text line (rather than the side of the container).
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/normalize/">normalize</a>
+				 &ndash; 
+         normalizes coordinates of final layout.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/twopi/">twopi</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/circo/">circo</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/notranslate/">notranslate</a>
+				 &ndash; 
+         Whether to avoid translating layout to the origin point.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/nslimit/">nslimit</a>
+				 &ndash; 
+         Sets number of iterations in network simplex applications.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/nslimit1/">nslimit1</a>
+				 &ndash; 
+         Sets number of iterations in network simplex applications.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/oneblock/">oneblock</a>
+				 &ndash; 
+         Whether to draw circo graphs around one circle.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/circo/">circo</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/ordering/">ordering</a>
+				 &ndash; 
+         Constrains the left-to-right ordering of node edges.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/orientation/">orientation</a>
+				 &ndash; 
+         node shape rotation angle, or graph orientation.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/outputorder/">outputorder</a>
+				 &ndash; 
+         Specify order in which nodes and edges are drawn.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap/">overlap</a>
+				 &ndash; 
+         Determines if and how node overlaps should be removed.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap_scaling/">overlap_scaling</a>
+				 &ndash; 
+         Scale layout by factor, to reduce node overlap.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap/">prism</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/circo/">circo</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/twopi/">twopi</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap_shrink/">overlap_shrink</a>
+				 &ndash; 
+         Whether the overlap removal algorithm should perform a compression pass to reduce the size of the layout.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap/">prism</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pack/">pack</a>
+				 &ndash; 
+         Whether each connected component of the graph should be laid out separately, and then the graphs packed together.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/packmode/">packmode</a>
+				 &ndash; 
+         How connected components should be packed.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pad/">pad</a>
+				 &ndash; 
+         Inches to extend the drawing area around the minimal area needed to draw the graph.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/page/">page</a>
+				 &ndash; 
+         Width and height of output pages, in inches.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pagedir/">pagedir</a>
+				 &ndash; 
+         The order in which pages are emitted.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/quadtree/">quadtree</a>
+				 &ndash; 
+         Quadtree scheme to use.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/quantum/">quantum</a>
+				 &ndash; 
+         If <code>quantum &gt; 0.0</code>, node label dimensions will be rounded to integral multiples of the quantum.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rankdir/">rankdir</a>
+				 &ndash; 
+         Sets direction of graph layout.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/ranksep/">ranksep</a>
+				 &ndash; 
+         Specifies separation between ranks.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/twopi/">twopi</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/ratio/">ratio</a>
+				 &ndash; 
+         Sets the aspect ratio (drawing height/drawing width) for the drawing.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/remincross/">remincross</a>
+				 &ndash; 
+         If there are multiple clusters, whether to run edge crossing minimization a second time.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/repulsiveforce/">repulsiveforce</a>
+				 &ndash; 
+         The power of the repulsive force used in an extended Fruchterman-Reingold.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/resolution/">resolution</a>
+				 &ndash; 
+         Synonym for <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dpi/"><code>dpi</code></a>.
+				
+					For
+					bitmap output, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/root/">root</a>
+				 &ndash; 
+         Specifies nodes to be used as the center of the layout.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/twopi/">twopi</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/circo/">circo</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rotate/">rotate</a>
+				 &ndash; 
+         If <code>rotate=90</code>, sets drawing orientation to landscape.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rotation/">rotation</a>
+				 &ndash; 
+         Rotates the final layout counter-clockwise by the specified number of degrees.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/scale/">scale</a>
+				 &ndash; 
+         Scales layout by the given factor after the initial layout.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/twopi/">twopi</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/searchsize/">searchsize</a>
+				 &ndash; 
+         During network simplex, the maximum number of edges with negative cut values to search when looking for an edge with minimum cut value.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/sep/">sep</a>
+				 &ndash; 
+         Margin to leave around nodes when removing node overlap.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/showboxes/">showboxes</a>
+				 &ndash; 
+         Print guide boxes for debugging.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/size/">size</a>
+				 &ndash; 
+         Maximum width and height of drawing, in inches.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/smoothing/">smoothing</a>
+				 &ndash; 
+         Specifies a post-processing step used to smooth out an uneven distribution of nodes.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/sortv/">sortv</a>
+				 &ndash; 
+         Sort order of graph components for ordering <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/packmode/"><code>packmode</code></a> packing.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/splines/">splines</a>
+				 &ndash; 
+         Controls how, and if, edges are represented.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/start/">start</a>
+				 &ndash; 
+         Parameter used to determine the initial layout of nodes.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/style/">style</a>
+				 &ndash; 
+         Set style information for components of the graph.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/stylesheet/">stylesheet</a>
+				 &ndash; 
+         A URL or pathname specifying an XML style sheet, used in SVG output.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/target/">target</a>
+				 &ndash; 
+         If the object has a <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/URL/"><code>URL</code></a>, this attribute determines which window of the browser is used for the URL.
+				
+					For
+					map, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/TBbalance/">TBbalance</a>
+				 &ndash; 
+         Which <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rank/">rank</a> to move floating (loose) nodes to.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/dot/">dot</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/tooltip/">tooltip</a>
+				 &ndash; 
+         Tooltip (mouse hover text) attached to the node, edge, cluster, or graph.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/cmap/">cmap</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/truecolor/">truecolor</a>
+				 &ndash; 
+         Whether internal bitmap rendering relies on a truecolor color model or uses.
+				
+					For
+					bitmap output only.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/URL/">URL</a>
+				 &ndash; 
+         Hyperlinks incorporated into device-dependent output.
+				
+					For
+					map, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/ps/">postscript</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/svg/">svg</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/viewport/">viewport</a>
+				 &ndash; 
+         Clipping window on final drawing.
+				
+				</li>
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/voro_margin/">voro_margin</a>
+				 &ndash; 
+         Tuning margin of Voronoi technique.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/">fdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/sfdp/">sfdp</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/twopi/">twopi</a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/circo/">circo</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+				<li>
+				<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/xdotversion/">xdotversion</a>
+				 &ndash; 
+         Determines the version of <code>xdot</code> used in output.
+				
+					For
+					<a href="https://qubitpi.github.io/graphviz.github.io/docs/outputs/canon/">xdot</a> only.
+				
+				</li>
+			
+		
+			
+		
+			
+		
+			
+		
+	</ul>
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+  Last modified September 14, 2022: <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/commit/2373968a05d9d6e1d69e7e29c62b6e1157c0521f">page Graph Attributes (2373968)</a>
+</div>
+
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://forum.graphviz.org/" aria-label="User mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/graphviz" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/graphviz" aria-label="Stack Overflow">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitLab" aria-label="GitLab">
+    <a class="text-white" target="_blank" rel="noopener" href="https://gitlab.com/graphviz/graphviz" aria-label="GitLab">
+      <i class="fab fa-gitlab"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 The Graphviz Authors All Rights Reserved</small>
+        
+	
+		<p class="mt-2"><a href="https://qubitpi.github.io/graphviz.github.io/about/">About</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://qubitpi.github.io/graphviz.github.io/js/main.min.91798a335c881f1b6b805085ba4aa22d1dbd2b0b18d105d05189fa104ddae350.js" integrity="sha256-kXmKM1yIHxtrgFCFukqiLR29KwsY0QXQUYn6EE3a41A=" crossorigin="anonymous"></script>
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/prism.js'></script>
+
+
+
+  </body>
+</html>

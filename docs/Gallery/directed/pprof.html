@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.109.0">
+<meta name="robots" content="index, follow">
+<link rel="shortcut icon" href="https://qubitpi.github.io/graphviz.github.io/Resources/favicon.png" >
+
+<title>pprof CPU Profile | Graphviz</title>
+<meta name="description" content="pprof, a profiling tool, can output callgraphs in Graphviz format.
+This is a CPU profile of the gzip program, limited to the top 20 stack frames, …">
+<meta property="og:title" content="pprof CPU Profile" />
+<meta property="og:description" content="pprof, a profiling tool, can output callgraphs in Graphviz format.
+This is a CPU profile of the gzip program, limited to the top 20 stack frames, generated from a pprof.profile with:
+$ go tool pprof --nodecount=20 --dot pprof.profile This illustrates how to create a legend in Graphviz.
+Node sizes, arrow sizes, and increasing redness all indicate the number of samples in that callstack." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/pprof.html" /><meta property="article:section" content="Gallery" />
+
+<meta property="article:modified_time" content="2021-09-05T16:54:38+10:00" /><meta property="og:site_name" content="Graphviz" />
+<meta itemprop="name" content="pprof CPU Profile">
+<meta itemprop="description" content="pprof, a profiling tool, can output callgraphs in Graphviz format.
+This is a CPU profile of the gzip program, limited to the top 20 stack frames, generated from a pprof.profile with:
+$ go tool pprof --nodecount=20 --dot pprof.profile This illustrates how to create a legend in Graphviz.
+Node sizes, arrow sizes, and increasing redness all indicate the number of samples in that callstack.">
+<meta itemprop="dateModified" content="2021-09-05T16:54:38+10:00" />
+<meta itemprop="wordCount" content="63">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="pprof CPU Profile"/>
+<meta name="twitter:description" content="pprof, a profiling tool, can output callgraphs in Graphviz format.
+This is a CPU profile of the gzip program, limited to the top 20 stack frames, generated from a pprof.profile with:
+$ go tool pprof --nodecount=20 --dot pprof.profile This illustrates how to create a legend in Graphviz.
+Node sizes, arrow sizes, and increasing redness all indicate the number of samples in that callstack."/>
+
+
+
+
+<link rel="preload" href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" as="style">
+<link href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://qubitpi.github.io/graphviz.github.io/css/prism.css"/>
+<link rel="canonical" href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/pprof.html">
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="https://qubitpi.github.io/graphviz.github.io/">
+		<span class="navbar-logo"></span><span class="font-weight-bold ">Graphviz</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/download/" ><i class='fas fa-download'></i><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/documentation/" ><i class='fas fa-book'></i><span>Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="https://qubitpi.github.io/graphviz.github.io/gallery/" ><i class='fas fa-images'></i><span class="active">Gallery</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://forum.graphviz.org/" target="_blank" ><i class='fab fa-discourse'></i><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://gitlab.com/graphviz/graphviz" target="_blank" ><i class='fab fa-gitlab'></i><span>GitLab</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"><input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="https://qubitpi.github.io/graphviz.github.io/offline-search-index.50bf51da3021df5a71952d71fe0a660e.json"
+  data-offline-search-base-href="https://qubitpi.github.io/graphviz.github.io/"
+  data-offline-search-max-results="10"
+>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+  <script>
+    $(function() {
+    $("#td-section-nav a").removeClass("active");
+    $("#td-section-nav #m-gallerydirectedpprofhtml").addClass("active"); 
+    $("#td-section-nav #m-gallerydirectedpprofhtml-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-gallerydirectedpprofhtml").parents("li").addClass("active-path"); 
+    $("#td-section-nav li.active-path").addClass("show"); 
+    $("#td-section-nav li.active-path").children("input").prop('checked', true);
+    $("#td-section-nav #m-gallerydirectedpprofhtml-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-gallerydirectedpprofhtml-li").children("ul").children("li").addClass("show");  
+    $("#td-sidebar-menu").toggleClass("d-none"); 
+    });
+  </script>
+  
+<div id="td-sidebar-menu" class="td-sidebar__inner d-none">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="https://qubitpi.github.io/graphviz.github.io/offline-search-index.50bf51da3021df5a71952d71fe0a660e.json"
+  data-offline-search-base-href="https://qubitpi.github.io/graphviz.github.io/"
+  data-offline-search-max-results="10"
+>
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-gallery-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/gallery/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-gallery"><span class="">Gallery</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-gallerydirected-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-gallerydirected"><span class="">Directed Graphs</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedgithtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/git.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedgithtml"><span class="">Basic Git Concepts and Operations</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedbazelhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/bazel.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedbazelhtml"><span class="">Bazel Build System</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedclusterhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/cluster.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedclusterhtml"><span class="">Clusters</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirecteddatastructhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/datastruct.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirecteddatastructhtml"><span class="">Data Structures</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedkennedyanchtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/kennedyanc.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedkennedyanchtml"><span class="">Family Tree</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedfsmhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/fsm.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedfsmhtml"><span class="">Finite Automaton</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedgo-packagehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/go-package.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedgo-packagehtml"><span class="">Go Package Imports</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedhellohtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/hello.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedhellohtml"><span class="">Hello World</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedlinux_kernel_diagramhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/Linux_kernel_diagram.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedlinux_kernel_diagramhtml"><span class="">Linux Kernel Diagram</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedgenetic_programminghtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/Genetic_Programming.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedgenetic_programminghtml"><span class="">Math Parse Tree</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedneural-networkhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/neural-network.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedneural-networkhtml"><span class="">Neural Network (Keras)</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedninjahtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/ninja.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedninjahtml"><span class="">Ninja Build System</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedpsghtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/psg.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedpsghtml"><span class="">Parsing tree</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedcrazyhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/crazy.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedcrazyhtml"><span class="">Polygons</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedpprofhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/pprof.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedpprofhtml"><span class="">pprof CPU Profile</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedprofilehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/profile.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedprofilehtml"><span class="">Program Profile</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedlion_sharehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/lion_share.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedlion_sharehtml"><span class="">Racehorse Pedigree</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedsiblingshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/siblings.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedsiblingshtml"><span class="">Siblings</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedswitchhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/switch.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedswitchhtml"><span class="">Switch Network</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedsdhhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/sdh.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedsdhhtml"><span class="">Synchronous Digital Hierarchy</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirecteduml_class_diagramhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/UML_Class_diagram.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirecteduml_class_diagramhtml"><span class="">UML Class diagram demo</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedunixhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/unix.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedunixhtml"><span class="">UNIX Family &#39;Tree&#39;</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerydirectedworldhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/world.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerydirectedworldhtml"><span class="">World Dynamics</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-galleryneato-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-galleryneato"><span class="">Neato Spring Graphs</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatocolor_wheelhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/color_wheel.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatocolor_wheelhtml"><span class="">Color wheel, 33 colors. Neato layout</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatoerhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/ER.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatoerhtml"><span class="">Entity-Relation Data Model</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatosoftmainthtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/softmaint.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatosoftmainthtml"><span class="">Module Dependencies</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatotransparencyhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/transparency.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatotransparencyhtml"><span class="">Partially Transparent Colors</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatophilohtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/philo.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatophilohtml"><span class="">Philosophers dilemma. Neato layout.</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatoprocesshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/process.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatoprocesshtml"><span class="">Process</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatotraffic_lightshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/traffic_lights.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatotraffic_lightshtml"><span class="">Traffic Lights</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryneatocolorshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/colors.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryneatocolorshtml"><span class="">Twelve colors, neato layout</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-galleryundirected-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-galleryundirected"><span class="">Undirected Graphs</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryundirectedgd_1994_2007html-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/gd_1994_2007.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedgd_1994_2007html"><span class="">Cluster relations in a graph highlighted using gvmap</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryundirectedgridhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/grid.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedgridhtml"><span class="">Grid</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-galleryundirectedsave-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/save/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-galleryundirectedsave"><span class="">Save</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-galleryundirectedsaveinethtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/save/inet.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedsaveinethtml"><span class="">Intranet Layout</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryundirectedfdpclusthtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/fdpclust.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedfdpclusthtml"><span class="">Undirected Graph Clusters</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-galleryundirectedroothtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/root.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-galleryundirectedroothtml"><span class="">Undirected Large Graph Layout Using sfdp</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-gallerytwopi-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-gallerytwopi"><span class="">Twopi Radial Graphs</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerytwopitwopi2html-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/twopi2.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerytwopitwopi2html"><span class="">A Network Map</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerytwopihappinesshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/happiness.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerytwopihappinesshtml"><span class="">Mind map of Happiness</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerytwopinetworkmap_twopihtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/networkmap_twopi.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerytwopinetworkmap_twopihtml"><span class="">Network Map by Pandora FMS</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-gallerygradient-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-gallerygradient"><span class="">Color Gradients</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientclusterhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/cluster.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientclusterhtml"><span class="">Cluster Gradients</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientlinear_anglehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/linear_angle.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientlinear_anglehtml"><span class="">Gradient Linear Angles</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientradial_anglehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/radial_angle.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientradial_anglehtml"><span class="">Gradient Radial Angles</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientdatastructhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/datastruct.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientdatastructhtml"><span class="">Gradients Applied to Data Struct Example</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientg_c_nhtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/g_c_n.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientg_c_nhtml"><span class="">Graph, Cluster and Node Gradients</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientangleshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/angles.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientangleshtml"><span class="">Linear and Radial Gradient Angles</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradientcolorshtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/colors.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradientcolorshtml"><span class="">Sample Gradient Color Schemes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-gallerygradienttablehtml-li">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/gradient/table.html" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-gallerygradienttablehtml"><span class="">Table and Cell Gradients</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href="https://gitlab.com/graphviz/graphviz.gitlab.io/tree/main/content/en/Gallery/directed/pprof.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+  <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/edit/main/content/en/Gallery/directed/pprof.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+  <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/new/main/content/en/Gallery/directed/pprof.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+  <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/issues/new?title=pprof%20CPU%20Profile" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+  <a id="print" href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            
+
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="https://qubitpi.github.io/graphviz.github.io/gallery/">Gallery</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/">Directed Graphs</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/pprof.html">pprof CPU Profile</a>
+  </li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>pprof CPU Profile</h1>
+  
+	
+	<p><a href="https://github.com/google/pprof">pprof</a>, a profiling tool, can output callgraphs in Graphviz format.</p>
+<p>This is a CPU profile of the <code>gzip</code> program, limited to the top 20 stack frames, generated from a <code>pprof.profile</code> with:</p>
+<pre tabindex="0"><code>$ go tool pprof --nodecount=20 --dot pprof.profile
+</code></pre><p>This illustrates how to create a legend in Graphviz.</p>
+<p>Node sizes, arrow sizes, and increasing redness all indicate the number of samples in that callstack.</p>
+
+  <p>
+    <a href="pprof.svg">
+    <img style="max-width:100%;" src="pprof.svg">
+    </a>
+  </p>
+  <p>
+  [<a href="pprof.gv.txt">Input .gv File</a>]
+  [<a href="pprof.svg">SVG</a>]
+  [<a href="pprof.png">Raster Image</a>]
+  </p>
+  
+  
+<div class="card mb-4">
+  
+    <div class="card-header">
+      
+        pprof.gv.txt
+      
+    </div>
+  
+  <div class="card-body">
+    
+    <pre tabindex="0"><code class="language-dot" data-lang="dot">digraph &#34;[stackcollapse]&#34; {
+fontname=&#34;Helvetica,Arial,sans-serif&#34;
+node [fontname=&#34;Helvetica,Arial,sans-serif&#34;]
+edge [fontname=&#34;Helvetica,Arial,sans-serif&#34;]
+node [style=filled fillcolor=&#34;#f8f8f8&#34;]
+subgraph cluster_L { &#34;File: [stackcollapse]&#34; [shape=box fontsize=16 label=&#34;File: [stackcollapse]\l\lShowing nodes accounting for 380, 90.48% of 420 total\lDropped 120 nodes (cum &lt;= 2)\lShowing top 20 nodes out of 110\l\lSee https://git.io/JfYMW for how to read the graph\l&#34; tooltip=&#34;[stackcollapse]&#34;] }
+N1 [label=&#34;deflate\n62 (14.76%)\nof 384 (91.43%)&#34; id=&#34;node1&#34; fontsize=18 shape=box tooltip=&#34;deflate (384)&#34; color=&#34;#b20400&#34; fillcolor=&#34;#edd6d5&#34;]
+N2 [label=&#34;gzip\n0 of 409 (97.38%)&#34; id=&#34;node2&#34; fontsize=8 shape=box tooltip=&#34;gzip (409)&#34; color=&#34;#b20100&#34; fillcolor=&#34;#edd5d5&#34;]
+N3 [label=&#34;longest_match\n178 (42.38%)&#34; id=&#34;node3&#34; fontsize=24 shape=box tooltip=&#34;longest_match (178)&#34; color=&#34;#b22800&#34; fillcolor=&#34;#eddad5&#34;]
+N4 [label=&#34;fill_window\n41 (9.76%)\nof 102 (24.29%)&#34; id=&#34;node4&#34; fontsize=16 shape=box tooltip=&#34;fill_window (102)&#34; color=&#34;#b23d00&#34; fillcolor=&#34;#edddd5&#34;]
+N5 [label=&#34;updcrc\n46 (10.95%)\nof 48 (11.43%)&#34; id=&#34;node5&#34; fontsize=17 shape=box tooltip=&#34;updcrc (48)&#34; color=&#34;#b27d4c&#34; fillcolor=&#34;#ede6df&#34;]
+N6 [label=&#34;file_read\n0 of 62 (14.76%)&#34; id=&#34;node6&#34; fontsize=8 shape=box tooltip=&#34;file_read (62)&#34; color=&#34;#b2682e&#34; fillcolor=&#34;#ede3db&#34;]
+N7 [label=&#34;entry_SYSCALL_64_after_hwframe\n0 of 34 (8.10%)&#34; id=&#34;node7&#34; fontsize=8 shape=box tooltip=&#34;entry_SYSCALL_64_after_hwframe (34)&#34; color=&#34;#b2906a&#34; fillcolor=&#34;#ede8e3&#34;]
+N8 [label=&#34;compress_block\n14 (3.33%)\nof 25 (5.95%)&#34; id=&#34;node8&#34; fontsize=13 shape=box tooltip=&#34;compress_block (25)&#34; color=&#34;#b29b7d&#34; fillcolor=&#34;#edeae6&#34;]
+N9 [label=&#34;send_bits\n13 (3.10%)\nof 16 (3.81%)&#34; id=&#34;node9&#34; fontsize=13 shape=box tooltip=&#34;send_bits (16)&#34; color=&#34;#b2a590&#34; fillcolor=&#34;#edebe8&#34;]
+N10 [label=&#34;ct_tally\n13 (3.10%)&#34; id=&#34;node10&#34; fontsize=13 shape=box tooltip=&#34;ct_tally (13)&#34; color=&#34;#b2a896&#34; fillcolor=&#34;#edebe9&#34;]
+N11 [label=&#34;do_syscall_64\n0 of 33 (7.86%)&#34; id=&#34;node11&#34; fontsize=8 shape=box tooltip=&#34;do_syscall_64 (33)&#34; color=&#34;#b2916c&#34; fillcolor=&#34;#ede8e3&#34;]
+N12 [label=&#34;_start\n0 of 393 (93.57%)&#34; id=&#34;node12&#34; fontsize=8 shape=box tooltip=&#34;_start (393)&#34; color=&#34;#b20300&#34; fillcolor=&#34;#edd5d5&#34;]
+N13 [label=&#34;zip\n0 of 386 (91.90%)&#34; id=&#34;node13&#34; fontsize=8 shape=box tooltip=&#34;zip (386)&#34; color=&#34;#b20400&#34; fillcolor=&#34;#edd6d5&#34;]
+N14 [label=&#34;native_write_msr\n9 (2.14%)&#34; id=&#34;node14&#34; fontsize=12 shape=box tooltip=&#34;native_write_msr (9)&#34; color=&#34;#b2ac9f&#34; fillcolor=&#34;#edecea&#34;]
+N15 [label=&#34;treat_file\n0 of 389 (92.62%)&#34; id=&#34;node15&#34; fontsize=8 shape=box tooltip=&#34;treat_file (389)&#34; color=&#34;#b20400&#34; fillcolor=&#34;#edd5d5&#34;]
+N16 [label=&#34;[unknown]\n0 of 10 (2.38%)&#34; id=&#34;node16&#34; fontsize=8 shape=box tooltip=&#34;[unknown] (10)&#34; color=&#34;#b2ab9d&#34; fillcolor=&#34;#edecea&#34;]
+N17 [label=&#34;page_cache_ra_unbounded\n2 (0.48%)\nof 13 (3.10%)&#34; id=&#34;node17&#34; fontsize=10 shape=box tooltip=&#34;page_cache_ra_unbounded (13)&#34; color=&#34;#b2a896&#34; fillcolor=&#34;#edebe9&#34;]
+N18 [label=&#34;asm_exc_page_fault\n1 (0.24%)\nof 5 (1.19%)&#34; id=&#34;node18&#34; fontsize=10 shape=box tooltip=&#34;asm_exc_page_fault (5)&#34; color=&#34;#b2afa7&#34; fillcolor=&#34;#edeceb&#34;]
+N19 [label=&#34;__x64_sys_read\n1 (0.24%)\nof 15 (3.57%)&#34; id=&#34;node19&#34; fontsize=10 shape=box tooltip=&#34;__x64_sys_read (15)&#34; color=&#34;#b2a692&#34; fillcolor=&#34;#edebe8&#34;]
+N20 [label=&#34;flush_block\n0 of 27 (6.43%)&#34; id=&#34;node20&#34; fontsize=8 shape=box tooltip=&#34;flush_block (27)&#34; color=&#34;#b29979&#34; fillcolor=&#34;#ede9e5&#34;]
+N2 -&gt; N12 [label=&#34; 393&#34; weight=94 penwidth=5 color=&#34;#b20300&#34; tooltip=&#34;gzip -&gt; _start (393)&#34; labeltooltip=&#34;gzip -&gt; _start (393)&#34;]
+N12 -&gt; N15 [label=&#34; 389&#34; weight=93 penwidth=5 color=&#34;#b20400&#34; tooltip=&#34;_start ... treat_file (389)&#34; labeltooltip=&#34;_start ... treat_file (389)&#34; style=&#34;dotted&#34;]
+N15 -&gt; N13 [label=&#34; 386&#34; weight=92 penwidth=5 color=&#34;#b20400&#34; tooltip=&#34;treat_file -&gt; zip (386)&#34; labeltooltip=&#34;treat_file -&gt; zip (386)&#34;]
+N13 -&gt; N1 [label=&#34; 384&#34; weight=92 penwidth=5 color=&#34;#b20400&#34; tooltip=&#34;zip -&gt; deflate (384)&#34; labeltooltip=&#34;zip -&gt; deflate (384)&#34;]
+N1 -&gt; N3 [label=&#34; 176&#34; weight=42 penwidth=3 color=&#34;#b22800&#34; tooltip=&#34;deflate -&gt; longest_match (176)&#34; labeltooltip=&#34;deflate -&gt; longest_match (176)&#34;]
+N1 -&gt; N4 [label=&#34; 102&#34; weight=25 penwidth=2 color=&#34;#b23d00&#34; tooltip=&#34;deflate -&gt; fill_window (102)&#34; labeltooltip=&#34;deflate -&gt; fill_window (102)&#34;]
+N4 -&gt; N6 [label=&#34; 58&#34; weight=14 color=&#34;#b26e37&#34; tooltip=&#34;fill_window -&gt; file_read (58)&#34; labeltooltip=&#34;fill_window -&gt; file_read (58)&#34;]
+N6 -&gt; N5 [label=&#34; 48&#34; weight=12 color=&#34;#b27d4c&#34; tooltip=&#34;file_read -&gt; updcrc (48)&#34; labeltooltip=&#34;file_read -&gt; updcrc (48)&#34;]
+N7 -&gt; N11 [label=&#34; 33&#34; weight=8 color=&#34;#b2916c&#34; tooltip=&#34;entry_SYSCALL_64_after_hwframe -&gt; do_syscall_64 (33)&#34; labeltooltip=&#34;entry_SYSCALL_64_after_hwframe -&gt; do_syscall_64 (33)&#34;]
+N1 -&gt; N20 [label=&#34; 26&#34; weight=7 color=&#34;#b29a7b&#34; tooltip=&#34;deflate -&gt; flush_block (26)&#34; labeltooltip=&#34;deflate -&gt; flush_block (26)&#34;]
+N20 -&gt; N8 [label=&#34; 23&#34; weight=6 color=&#34;#b29e81&#34; tooltip=&#34;flush_block -&gt; compress_block (23)&#34; labeltooltip=&#34;flush_block -&gt; compress_block (23)&#34;]
+N11 -&gt; N19 [label=&#34; 14&#34; weight=4 color=&#34;#b2a794&#34; tooltip=&#34;do_syscall_64 -&gt; __x64_sys_read (14)&#34; labeltooltip=&#34;do_syscall_64 -&gt; __x64_sys_read (14)&#34;]
+N6 -&gt; N7 [label=&#34; 14&#34; weight=4 color=&#34;#b2a794&#34; tooltip=&#34;file_read ... entry_SYSCALL_64_after_hwframe (14)&#34; labeltooltip=&#34;file_read ... entry_SYSCALL_64_after_hwframe (14)&#34; style=&#34;dotted&#34;]
+N19 -&gt; N17 [label=&#34; 13&#34; weight=4 color=&#34;#b2a896&#34; tooltip=&#34;__x64_sys_read ... page_cache_ra_unbounded (13)&#34; labeltooltip=&#34;__x64_sys_read ... page_cache_ra_unbounded (13)&#34; style=&#34;dotted&#34;]
+N1 -&gt; N10 [label=&#34; 12&#34; weight=3 color=&#34;#b2a999&#34; tooltip=&#34;deflate -&gt; ct_tally (12)&#34; labeltooltip=&#34;deflate -&gt; ct_tally (12)&#34;]
+N8 -&gt; N9 [label=&#34; 11&#34; weight=3 color=&#34;#b2aa9b&#34; tooltip=&#34;compress_block -&gt; send_bits (11)&#34; labeltooltip=&#34;compress_block -&gt; send_bits (11)&#34;]
+N2 -&gt; N16 [label=&#34; 10&#34; weight=3 color=&#34;#b2ab9d&#34; tooltip=&#34;gzip -&gt; [unknown] (10)&#34; labeltooltip=&#34;gzip -&gt; [unknown] (10)&#34;]
+N11 -&gt; N14 [label=&#34; 9&#34; weight=3 color=&#34;#b2ac9f&#34; tooltip=&#34;do_syscall_64 ... native_write_msr (9)&#34; labeltooltip=&#34;do_syscall_64 ... native_write_msr (9)&#34; style=&#34;dotted&#34;]
+N16 -&gt; N9 [label=&#34; 5&#34; weight=2 color=&#34;#b2afa7&#34; tooltip=&#34;[unknown] -&gt; send_bits (5)&#34; labeltooltip=&#34;[unknown] -&gt; send_bits (5)&#34;]
+N2 -&gt; N7 [label=&#34; 4&#34; color=&#34;#b2b0aa&#34; tooltip=&#34;gzip -&gt; entry_SYSCALL_64_after_hwframe (4)&#34; labeltooltip=&#34;gzip -&gt; entry_SYSCALL_64_after_hwframe (4)&#34;]
+N16 -&gt; N8 [label=&#34; 2&#34; color=&#34;#b2b1ae&#34; tooltip=&#34;[unknown] -&gt; compress_block (2)&#34; labeltooltip=&#34;[unknown] -&gt; compress_block (2)&#34;]
+N16 -&gt; N3 [label=&#34; 2&#34; color=&#34;#b2b1ae&#34; tooltip=&#34;[unknown] -&gt; longest_match (2)&#34; labeltooltip=&#34;[unknown] -&gt; longest_match (2)&#34;]
+N2 -&gt; N18 [label=&#34; 2&#34; color=&#34;#b2b1ae&#34; tooltip=&#34;gzip ... asm_exc_page_fault (2)&#34; labeltooltip=&#34;gzip ... asm_exc_page_fault (2)&#34; style=&#34;dotted&#34;]
+N9 -&gt; N18 [label=&#34; 2&#34; color=&#34;#b2b1ae&#34; tooltip=&#34;send_bits -&gt; asm_exc_page_fault (2)&#34; labeltooltip=&#34;send_bits -&gt; asm_exc_page_fault (2)&#34;]
+N16 -&gt; N10 [label=&#34; 1&#34; color=&#34;#b2b2b0&#34; tooltip=&#34;[unknown] -&gt; ct_tally (1)&#34; labeltooltip=&#34;[unknown] -&gt; ct_tally (1)&#34;]
+N7 -&gt; N19 [label=&#34; 1&#34; color=&#34;#b2b2b0&#34; tooltip=&#34;entry_SYSCALL_64_after_hwframe -&gt; __x64_sys_read (1)&#34; labeltooltip=&#34;entry_SYSCALL_64_after_hwframe -&gt; __x64_sys_read (1)&#34;]
+N9 -&gt; N7 [label=&#34; 1&#34; color=&#34;#b2b2b0&#34; tooltip=&#34;send_bits ... entry_SYSCALL_64_after_hwframe (1)&#34; labeltooltip=&#34;send_bits ... entry_SYSCALL_64_after_hwframe (1)&#34; style=&#34;dotted&#34;]
+N13 -&gt; N20 [label=&#34; 1&#34; color=&#34;#b2b2b0&#34; tooltip=&#34;zip -&gt; flush_block (1)&#34; labeltooltip=&#34;zip -&gt; flush_block (1)&#34;]
+}</code></pre></div>
+  <div class="card-footer">
+    <a href="http://magjac.com/graphviz-visual-editor/?dot=digraph%20%22%5bstackcollapse%5d%22%20%7b%0afontname%3d%22Helvetica%2cArial%2csans-serif%22%0anode%20%5bfontname%3d%22Helvetica%2cArial%2csans-serif%22%5d%0aedge%20%5bfontname%3d%22Helvetica%2cArial%2csans-serif%22%5d%0anode%20%5bstyle%3dfilled%20fillcolor%3d%22%23f8f8f8%22%5d%0asubgraph%20cluster_L%20%7b%20%22File%3a%20%5bstackcollapse%5d%22%20%5bshape%3dbox%20fontsize%3d16%20label%3d%22File%3a%20%5bstackcollapse%5d%5cl%5clShowing%20nodes%20accounting%20for%20380%2c%2090.48%25%20of%20420%20total%5clDropped%20120%20nodes%20%28cum%20%3c%3d%202%29%5clShowing%20top%2020%20nodes%20out%20of%20110%5cl%5clSee%20https%3a%2f%2fgit.io%2fJfYMW%20for%20how%20to%20read%20the%20graph%5cl%22%20tooltip%3d%22%5bstackcollapse%5d%22%5d%20%7d%0aN1%20%5blabel%3d%22deflate%5cn62%20%2814.76%25%29%5cnof%20384%20%2891.43%25%29%22%20id%3d%22node1%22%20fontsize%3d18%20shape%3dbox%20tooltip%3d%22deflate%20%28384%29%22%20color%3d%22%23b20400%22%20fillcolor%3d%22%23edd6d5%22%5d%0aN2%20%5blabel%3d%22gzip%5cn0%20of%20409%20%2897.38%25%29%22%20id%3d%22node2%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22gzip%20%28409%29%22%20color%3d%22%23b20100%22%20fillcolor%3d%22%23edd5d5%22%5d%0aN3%20%5blabel%3d%22longest_match%5cn178%20%2842.38%25%29%22%20id%3d%22node3%22%20fontsize%3d24%20shape%3dbox%20tooltip%3d%22longest_match%20%28178%29%22%20color%3d%22%23b22800%22%20fillcolor%3d%22%23eddad5%22%5d%0aN4%20%5blabel%3d%22fill_window%5cn41%20%289.76%25%29%5cnof%20102%20%2824.29%25%29%22%20id%3d%22node4%22%20fontsize%3d16%20shape%3dbox%20tooltip%3d%22fill_window%20%28102%29%22%20color%3d%22%23b23d00%22%20fillcolor%3d%22%23edddd5%22%5d%0aN5%20%5blabel%3d%22updcrc%5cn46%20%2810.95%25%29%5cnof%2048%20%2811.43%25%29%22%20id%3d%22node5%22%20fontsize%3d17%20shape%3dbox%20tooltip%3d%22updcrc%20%2848%29%22%20color%3d%22%23b27d4c%22%20fillcolor%3d%22%23ede6df%22%5d%0aN6%20%5blabel%3d%22file_read%5cn0%20of%2062%20%2814.76%25%29%22%20id%3d%22node6%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22file_read%20%2862%29%22%20color%3d%22%23b2682e%22%20fillcolor%3d%22%23ede3db%22%5d%0aN7%20%5blabel%3d%22entry_SYSCALL_64_after_hwframe%5cn0%20of%2034%20%288.10%25%29%22%20id%3d%22node7%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22entry_SYSCALL_64_after_hwframe%20%2834%29%22%20color%3d%22%23b2906a%22%20fillcolor%3d%22%23ede8e3%22%5d%0aN8%20%5blabel%3d%22compress_block%5cn14%20%283.33%25%29%5cnof%2025%20%285.95%25%29%22%20id%3d%22node8%22%20fontsize%3d13%20shape%3dbox%20tooltip%3d%22compress_block%20%2825%29%22%20color%3d%22%23b29b7d%22%20fillcolor%3d%22%23edeae6%22%5d%0aN9%20%5blabel%3d%22send_bits%5cn13%20%283.10%25%29%5cnof%2016%20%283.81%25%29%22%20id%3d%22node9%22%20fontsize%3d13%20shape%3dbox%20tooltip%3d%22send_bits%20%2816%29%22%20color%3d%22%23b2a590%22%20fillcolor%3d%22%23edebe8%22%5d%0aN10%20%5blabel%3d%22ct_tally%5cn13%20%283.10%25%29%22%20id%3d%22node10%22%20fontsize%3d13%20shape%3dbox%20tooltip%3d%22ct_tally%20%2813%29%22%20color%3d%22%23b2a896%22%20fillcolor%3d%22%23edebe9%22%5d%0aN11%20%5blabel%3d%22do_syscall_64%5cn0%20of%2033%20%287.86%25%29%22%20id%3d%22node11%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22do_syscall_64%20%2833%29%22%20color%3d%22%23b2916c%22%20fillcolor%3d%22%23ede8e3%22%5d%0aN12%20%5blabel%3d%22_start%5cn0%20of%20393%20%2893.57%25%29%22%20id%3d%22node12%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22_start%20%28393%29%22%20color%3d%22%23b20300%22%20fillcolor%3d%22%23edd5d5%22%5d%0aN13%20%5blabel%3d%22zip%5cn0%20of%20386%20%2891.90%25%29%22%20id%3d%22node13%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22zip%20%28386%29%22%20color%3d%22%23b20400%22%20fillcolor%3d%22%23edd6d5%22%5d%0aN14%20%5blabel%3d%22native_write_msr%5cn9%20%282.14%25%29%22%20id%3d%22node14%22%20fontsize%3d12%20shape%3dbox%20tooltip%3d%22native_write_msr%20%289%29%22%20color%3d%22%23b2ac9f%22%20fillcolor%3d%22%23edecea%22%5d%0aN15%20%5blabel%3d%22treat_file%5cn0%20of%20389%20%2892.62%25%29%22%20id%3d%22node15%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22treat_file%20%28389%29%22%20color%3d%22%23b20400%22%20fillcolor%3d%22%23edd5d5%22%5d%0aN16%20%5blabel%3d%22%5bunknown%5d%5cn0%20of%2010%20%282.38%25%29%22%20id%3d%22node16%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22%5bunknown%5d%20%2810%29%22%20color%3d%22%23b2ab9d%22%20fillcolor%3d%22%23edecea%22%5d%0aN17%20%5blabel%3d%22page_cache_ra_unbounded%5cn2%20%280.48%25%29%5cnof%2013%20%283.10%25%29%22%20id%3d%22node17%22%20fontsize%3d10%20shape%3dbox%20tooltip%3d%22page_cache_ra_unbounded%20%2813%29%22%20color%3d%22%23b2a896%22%20fillcolor%3d%22%23edebe9%22%5d%0aN18%20%5blabel%3d%22asm_exc_page_fault%5cn1%20%280.24%25%29%5cnof%205%20%281.19%25%29%22%20id%3d%22node18%22%20fontsize%3d10%20shape%3dbox%20tooltip%3d%22asm_exc_page_fault%20%285%29%22%20color%3d%22%23b2afa7%22%20fillcolor%3d%22%23edeceb%22%5d%0aN19%20%5blabel%3d%22__x64_sys_read%5cn1%20%280.24%25%29%5cnof%2015%20%283.57%25%29%22%20id%3d%22node19%22%20fontsize%3d10%20shape%3dbox%20tooltip%3d%22__x64_sys_read%20%2815%29%22%20color%3d%22%23b2a692%22%20fillcolor%3d%22%23edebe8%22%5d%0aN20%20%5blabel%3d%22flush_block%5cn0%20of%2027%20%286.43%25%29%22%20id%3d%22node20%22%20fontsize%3d8%20shape%3dbox%20tooltip%3d%22flush_block%20%2827%29%22%20color%3d%22%23b29979%22%20fillcolor%3d%22%23ede9e5%22%5d%0aN2%20-%3e%20N12%20%5blabel%3d%22%20393%22%20weight%3d94%20penwidth%3d5%20color%3d%22%23b20300%22%20tooltip%3d%22gzip%20-%3e%20_start%20%28393%29%22%20labeltooltip%3d%22gzip%20-%3e%20_start%20%28393%29%22%5d%0aN12%20-%3e%20N15%20%5blabel%3d%22%20389%22%20weight%3d93%20penwidth%3d5%20color%3d%22%23b20400%22%20tooltip%3d%22_start%20...%20treat_file%20%28389%29%22%20labeltooltip%3d%22_start%20...%20treat_file%20%28389%29%22%20style%3d%22dotted%22%5d%0aN15%20-%3e%20N13%20%5blabel%3d%22%20386%22%20weight%3d92%20penwidth%3d5%20color%3d%22%23b20400%22%20tooltip%3d%22treat_file%20-%3e%20zip%20%28386%29%22%20labeltooltip%3d%22treat_file%20-%3e%20zip%20%28386%29%22%5d%0aN13%20-%3e%20N1%20%5blabel%3d%22%20384%22%20weight%3d92%20penwidth%3d5%20color%3d%22%23b20400%22%20tooltip%3d%22zip%20-%3e%20deflate%20%28384%29%22%20labeltooltip%3d%22zip%20-%3e%20deflate%20%28384%29%22%5d%0aN1%20-%3e%20N3%20%5blabel%3d%22%20176%22%20weight%3d42%20penwidth%3d3%20color%3d%22%23b22800%22%20tooltip%3d%22deflate%20-%3e%20longest_match%20%28176%29%22%20labeltooltip%3d%22deflate%20-%3e%20longest_match%20%28176%29%22%5d%0aN1%20-%3e%20N4%20%5blabel%3d%22%20102%22%20weight%3d25%20penwidth%3d2%20color%3d%22%23b23d00%22%20tooltip%3d%22deflate%20-%3e%20fill_window%20%28102%29%22%20labeltooltip%3d%22deflate%20-%3e%20fill_window%20%28102%29%22%5d%0aN4%20-%3e%20N6%20%5blabel%3d%22%2058%22%20weight%3d14%20color%3d%22%23b26e37%22%20tooltip%3d%22fill_window%20-%3e%20file_read%20%2858%29%22%20labeltooltip%3d%22fill_window%20-%3e%20file_read%20%2858%29%22%5d%0aN6%20-%3e%20N5%20%5blabel%3d%22%2048%22%20weight%3d12%20color%3d%22%23b27d4c%22%20tooltip%3d%22file_read%20-%3e%20updcrc%20%2848%29%22%20labeltooltip%3d%22file_read%20-%3e%20updcrc%20%2848%29%22%5d%0aN7%20-%3e%20N11%20%5blabel%3d%22%2033%22%20weight%3d8%20color%3d%22%23b2916c%22%20tooltip%3d%22entry_SYSCALL_64_after_hwframe%20-%3e%20do_syscall_64%20%2833%29%22%20labeltooltip%3d%22entry_SYSCALL_64_after_hwframe%20-%3e%20do_syscall_64%20%2833%29%22%5d%0aN1%20-%3e%20N20%20%5blabel%3d%22%2026%22%20weight%3d7%20color%3d%22%23b29a7b%22%20tooltip%3d%22deflate%20-%3e%20flush_block%20%2826%29%22%20labeltooltip%3d%22deflate%20-%3e%20flush_block%20%2826%29%22%5d%0aN20%20-%3e%20N8%20%5blabel%3d%22%2023%22%20weight%3d6%20color%3d%22%23b29e81%22%20tooltip%3d%22flush_block%20-%3e%20compress_block%20%2823%29%22%20labeltooltip%3d%22flush_block%20-%3e%20compress_block%20%2823%29%22%5d%0aN11%20-%3e%20N19%20%5blabel%3d%22%2014%22%20weight%3d4%20color%3d%22%23b2a794%22%20tooltip%3d%22do_syscall_64%20-%3e%20__x64_sys_read%20%2814%29%22%20labeltooltip%3d%22do_syscall_64%20-%3e%20__x64_sys_read%20%2814%29%22%5d%0aN6%20-%3e%20N7%20%5blabel%3d%22%2014%22%20weight%3d4%20color%3d%22%23b2a794%22%20tooltip%3d%22file_read%20...%20entry_SYSCALL_64_after_hwframe%20%2814%29%22%20labeltooltip%3d%22file_read%20...%20entry_SYSCALL_64_after_hwframe%20%2814%29%22%20style%3d%22dotted%22%5d%0aN19%20-%3e%20N17%20%5blabel%3d%22%2013%22%20weight%3d4%20color%3d%22%23b2a896%22%20tooltip%3d%22__x64_sys_read%20...%20page_cache_ra_unbounded%20%2813%29%22%20labeltooltip%3d%22__x64_sys_read%20...%20page_cache_ra_unbounded%20%2813%29%22%20style%3d%22dotted%22%5d%0aN1%20-%3e%20N10%20%5blabel%3d%22%2012%22%20weight%3d3%20color%3d%22%23b2a999%22%20tooltip%3d%22deflate%20-%3e%20ct_tally%20%2812%29%22%20labeltooltip%3d%22deflate%20-%3e%20ct_tally%20%2812%29%22%5d%0aN8%20-%3e%20N9%20%5blabel%3d%22%2011%22%20weight%3d3%20color%3d%22%23b2aa9b%22%20tooltip%3d%22compress_block%20-%3e%20send_bits%20%2811%29%22%20labeltooltip%3d%22compress_block%20-%3e%20send_bits%20%2811%29%22%5d%0aN2%20-%3e%20N16%20%5blabel%3d%22%2010%22%20weight%3d3%20color%3d%22%23b2ab9d%22%20tooltip%3d%22gzip%20-%3e%20%5bunknown%5d%20%2810%29%22%20labeltooltip%3d%22gzip%20-%3e%20%5bunknown%5d%20%2810%29%22%5d%0aN11%20-%3e%20N14%20%5blabel%3d%22%209%22%20weight%3d3%20color%3d%22%23b2ac9f%22%20tooltip%3d%22do_syscall_64%20...%20native_write_msr%20%289%29%22%20labeltooltip%3d%22do_syscall_64%20...%20native_write_msr%20%289%29%22%20style%3d%22dotted%22%5d%0aN16%20-%3e%20N9%20%5blabel%3d%22%205%22%20weight%3d2%20color%3d%22%23b2afa7%22%20tooltip%3d%22%5bunknown%5d%20-%3e%20send_bits%20%285%29%22%20labeltooltip%3d%22%5bunknown%5d%20-%3e%20send_bits%20%285%29%22%5d%0aN2%20-%3e%20N7%20%5blabel%3d%22%204%22%20color%3d%22%23b2b0aa%22%20tooltip%3d%22gzip%20-%3e%20entry_SYSCALL_64_after_hwframe%20%284%29%22%20labeltooltip%3d%22gzip%20-%3e%20entry_SYSCALL_64_after_hwframe%20%284%29%22%5d%0aN16%20-%3e%20N8%20%5blabel%3d%22%202%22%20color%3d%22%23b2b1ae%22%20tooltip%3d%22%5bunknown%5d%20-%3e%20compress_block%20%282%29%22%20labeltooltip%3d%22%5bunknown%5d%20-%3e%20compress_block%20%282%29%22%5d%0aN16%20-%3e%20N3%20%5blabel%3d%22%202%22%20color%3d%22%23b2b1ae%22%20tooltip%3d%22%5bunknown%5d%20-%3e%20longest_match%20%282%29%22%20labeltooltip%3d%22%5bunknown%5d%20-%3e%20longest_match%20%282%29%22%5d%0aN2%20-%3e%20N18%20%5blabel%3d%22%202%22%20color%3d%22%23b2b1ae%22%20tooltip%3d%22gzip%20...%20asm_exc_page_fault%20%282%29%22%20labeltooltip%3d%22gzip%20...%20asm_exc_page_fault%20%282%29%22%20style%3d%22dotted%22%5d%0aN9%20-%3e%20N18%20%5blabel%3d%22%202%22%20color%3d%22%23b2b1ae%22%20tooltip%3d%22send_bits%20-%3e%20asm_exc_page_fault%20%282%29%22%20labeltooltip%3d%22send_bits%20-%3e%20asm_exc_page_fault%20%282%29%22%5d%0aN16%20-%3e%20N10%20%5blabel%3d%22%201%22%20color%3d%22%23b2b2b0%22%20tooltip%3d%22%5bunknown%5d%20-%3e%20ct_tally%20%281%29%22%20labeltooltip%3d%22%5bunknown%5d%20-%3e%20ct_tally%20%281%29%22%5d%0aN7%20-%3e%20N19%20%5blabel%3d%22%201%22%20color%3d%22%23b2b2b0%22%20tooltip%3d%22entry_SYSCALL_64_after_hwframe%20-%3e%20__x64_sys_read%20%281%29%22%20labeltooltip%3d%22entry_SYSCALL_64_after_hwframe%20-%3e%20__x64_sys_read%20%281%29%22%5d%0aN9%20-%3e%20N7%20%5blabel%3d%22%201%22%20color%3d%22%23b2b2b0%22%20tooltip%3d%22send_bits%20...%20entry_SYSCALL_64_after_hwframe%20%281%29%22%20labeltooltip%3d%22send_bits%20...%20entry_SYSCALL_64_after_hwframe%20%281%29%22%20style%3d%22dotted%22%5d%0aN13%20-%3e%20N20%20%5blabel%3d%22%201%22%20color%3d%22%23b2b2b0%22%20tooltip%3d%22zip%20-%3e%20flush_block%20%281%29%22%20labeltooltip%3d%22zip%20-%3e%20flush_block%20%281%29%22%5d%0a%7d" target="_blank"><i class="fa fa-external-link-alt"></i> Edit in Playground</a>
+    
+  </div>
+</div>
+
+	
+	
+  <p></p>
+	<div class="text-muted mt-5 pt-3 border-top">
+  Last modified September 5, 2021: <a href="https://gitlab.com/graphviz/graphviz.gitlab.io/commit/45f7071a40b629826acf550f6c8a11e7e87abd48">Add a pprof example to the gallery (45f7071)</a>
+</div>
+
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://forum.graphviz.org/" aria-label="User mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/graphviz" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/graphviz" aria-label="Stack Overflow">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitLab" aria-label="GitLab">
+    <a class="text-white" target="_blank" rel="noopener" href="https://gitlab.com/graphviz/graphviz" aria-label="GitLab">
+      <i class="fab fa-gitlab"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 The Graphviz Authors All Rights Reserved</small>
+        
+	
+		<p class="mt-2"><a href="https://qubitpi.github.io/graphviz.github.io/about/">About</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://qubitpi.github.io/graphviz.github.io/js/main.min.91798a335c881f1b6b805085ba4aa22d1dbd2b0b18d105d05189fa104ddae350.js" integrity="sha256-kXmKM1yIHxtrgFCFukqiLR29KwsY0QXQUYn6EE3a41A=" crossorigin="anonymous"></script>
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/prism.js'></script>
+
+
+
+  </body>
+</html>

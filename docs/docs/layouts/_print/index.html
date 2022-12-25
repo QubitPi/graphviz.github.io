@@ -1,0 +1,2480 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.109.0">
+<link rel="canonical" type="text/html" href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/">
+<meta name="robots" content="noindex, nofollow">
+<link rel="shortcut icon" href="https://qubitpi.github.io/graphviz.github.io/Resources/favicon.png" >
+
+<title>Layout Engines | Graphviz</title>
+<meta name="description" content="Various algorithms for projecting abstract graphs into a space for visualization.">
+<meta property="og:title" content="Layout Engines" />
+<meta property="og:description" content="Various algorithms for projecting abstract graphs into a space for visualization." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://qubitpi.github.io/graphviz.github.io/docs/layouts/" /><meta property="og:site_name" content="Graphviz" />
+<meta itemprop="name" content="Layout Engines">
+<meta itemprop="description" content="Various algorithms for projecting abstract graphs into a space for visualization."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Layout Engines"/>
+<meta name="twitter:description" content="Various algorithms for projecting abstract graphs into a space for visualization."/>
+
+
+
+
+<link rel="preload" href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" as="style">
+<link href="https://qubitpi.github.io/graphviz.github.io/scss/main.min.9214e0256c73126f09ca1292b07d9fe3e21b82ef953299efac9c2b0326e3dc0e.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://qubitpi.github.io/graphviz.github.io/css/prism.css"/>
+<link rel="canonical" href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/">
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="https://qubitpi.github.io/graphviz.github.io/">
+		<span class="navbar-logo"></span><span class="font-weight-bold ">Graphviz</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/download/" ><i class='fas fa-download'></i><span>Download</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="https://qubitpi.github.io/graphviz.github.io/documentation/" ><i class='fas fa-book'></i><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://qubitpi.github.io/graphviz.github.io/gallery/" ><i class='fas fa-images'></i><span>Gallery</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://forum.graphviz.org/" target="_blank" ><i class='fab fa-discourse'></i><span>Forum</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="https://gitlab.com/graphviz/graphviz" target="_blank" ><i class='fab fa-gitlab'></i><span>GitLab</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"><input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="https://qubitpi.github.io/graphviz.github.io/offline-search-index.50bf51da3021df5a71952d71fe0a660e.json"
+  data-offline-search-base-href="https://qubitpi.github.io/graphviz.github.io/"
+  data-offline-search-max-results="10"
+>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Layout Engines</h1>
+<div class="lead">Various algorithms for projecting abstract graphs into a space for visualization.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-418f5159c34d779de8a54d6bc09c75a9">dot</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-4020f31913125e4229ddf534c90458b6">neato</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-05b477850c4a6ee117e01ce845b884b1">fdp</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-fe31ac57626be911056b21d98f478cb2">sfdp</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-b400d08886eba0e9f454994774a408f8">circo</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-6a60103e6d8de0ef8ecee0dc942f5794">twopi</a></li>
+
+
+    
+  
+    
+    
+	
+<li>7: <a href="#pg-311ac82ae39b5fabe81b968762dc78ba">nop</a></li>
+
+
+    
+  
+    
+    
+	
+<li>8: <a href="#pg-4488f9083cf44cdd7bb9baefa908eb29">nop2</a></li>
+
+
+    
+  
+    
+    
+	
+<li>9: <a href="#pg-7b13721da022477e28ea60cf9e8f46f5">osage</a></li>
+
+
+    
+  
+    
+    
+	
+<li>10: <a href="#pg-ee5b9ea2924a1c6a91e5d0f9abe746e7">patchwork</a></li>
+
+
+    
+  
+    
+    
+	
+<li>11: <a href="#pg-828244c6b32eca9d30471f70e8c3404e">Writing Layout Plugins</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-418f5159c34d779de8a54d6bc09c75a9">1 - dot</h1>
+    <div class="lead"><a href="https://en.wikipedia.org/wiki/Layered_graph_drawing">hierarchical or layered drawings</a> of directed graphs.</div>
+	<p><code>dot</code> is the default tool to use if edges have directionality.</p>
+<p>The layout algorithm aims edges in the same direction (top to bottom, or left
+to right) and then attempts to avoid edge crossings and reduce edge length.</p>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/dot.1.pdf">PDF Manual</a></li>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/dotguide.pdf">User Guide</a> (caveat: not current with latest features of Graphviz)</li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/tree/main/lib/dotgen">Browse code</a></li>
+</ul>
+<p style="text-align: center;">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/cluster.html">
+    <img src="https://qubitpi.github.io/graphviz.github.io/Gallery/directed/cluster.svg">
+  </a>
+</p>
+<h2>Attributes for dot features</h2>
+<ul>
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/clusterrank/">clusterrank</a>
+		&ndash;
+		Mode used for handling clusters.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/compound/">compound</a>
+		&ndash;
+		If true, allow edges between clusters.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/constraint/">constraint</a>
+		&ndash;
+		If false, the edge is not used in ranking the nodes.
+		Valid on:
+		Edges.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/group/">group</a>
+		&ndash;
+		Name for a group of nodes, for bundling edges avoiding crossings..
+		Valid on:
+		Nodes.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/lhead/">lhead</a>
+		&ndash;
+		Logical head of an edge.
+		Valid on:
+		Edges.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/ltail/">ltail</a>
+		&ndash;
+		Logical tail of an edge.
+		Valid on:
+		Edges.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/mclimit/">mclimit</a>
+		&ndash;
+		Scale factor for mincross (mc) edge crossing minimiser parameters.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/minlen/">minlen</a>
+		&ndash;
+		Minimum edge length (rank difference between head and tail).
+		Valid on:
+		Edges.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/newrank/">newrank</a>
+		&ndash;
+		Whether to use a single global ranking, ignoring clusters.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/nslimit/">nslimit</a>
+		&ndash;
+		Sets number of iterations in network simplex applications.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/nslimit1/">nslimit1</a>
+		&ndash;
+		Sets number of iterations in network simplex applications.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/ordering/">ordering</a>
+		&ndash;
+		Constrains the left-to-right ordering of node edges..
+		Valid on:
+		Graphs, Nodes.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rank/">rank</a>
+		&ndash;
+		Rank constraints on the nodes in a subgraph.
+		Valid on:
+		Subgraphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rankdir/">rankdir</a>
+		&ndash;
+		Sets direction of graph layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/ranksep/">ranksep</a>
+		&ndash;
+		Specifies separation between ranks.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/remincross/">remincross</a>
+		&ndash;
+		If there are multiple clusters, whether to run edge crossing minimization a second time..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/samehead/">samehead</a>
+		&ndash;
+		Edges with the same head and the same <code>samehead</code> value are aimed at the same point on the head.
+		Valid on:
+		Edges.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/sametail/">sametail</a>
+		&ndash;
+		Edges with the same tail and the same <code>sametail</code> value are aimed at th.
+		Valid on:
+		Edges.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/searchsize/">searchsize</a>
+		&ndash;
+		During network simplex, the maximum number of edges with negative cut values to search when looking for an edge with minimum cut value..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/showboxes/">showboxes</a>
+		&ndash;
+		Print guide boxes for debugging.
+		Valid on:
+		Edges, Nodes, Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/TBbalance/">TBbalance</a>
+		&ndash;
+		Which <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rank/">rank</a> to move floating (loose) nodes to.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+</ul>
+<br/>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4020f31913125e4229ddf534c90458b6">2 - neato</h1>
+    <div class="lead">&quot;spring model&quot; layouts.</div>
+	<p><code>neato</code> is a reasonable default tool to use for undirected graphs that aren't
+too large (about 100 nodes), when you don't know anything else about the graph.</p>
+<p><code>neato</code> attempts to minimize a global energy function, which is equivalent to
+statistical multi-dimensional scaling.</p>
+<p>The solution is achieved using stress majorization<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, though the older
+Kamada-Kawai algorithm<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, using steepest descent, is also available,
+by switching <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/mode/"><code>mode</code></a>.</p>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/dot.1.pdf">PDF Manual</a></li>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/neatoguide.pdf">User Guide</a> (caveat: not current with latest features of Graphviz)</li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/tree/main/lib/neatogen">Browse code</a></li>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/">Gallery</a></li>
+</ul>
+<p style="text-align: center;">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/ER.html">
+    <img src="https://qubitpi.github.io/graphviz.github.io/Gallery/neato/ER.svg">
+  </a>
+</p>
+<h2>Attributes for neato features</h2>
+<ul>
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/Damping/">Damping</a>
+		&ndash;
+		Factor damping force motions..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/defaultdist/">defaultdist</a>
+		&ndash;
+		The distance between nodes in separate connected components.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dim/">dim</a>
+		&ndash;
+		Set the number of dimensions used for the layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dimen/">dimen</a>
+		&ndash;
+		Set the number of dimensions used for rendering.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/diredgeconstraints/">diredgeconstraints</a>
+		&ndash;
+		Whether to constrain most edges to point downwards.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/epsilon/">epsilon</a>
+		&ndash;
+		Terminating condition.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/esep/">esep</a>
+		&ndash;
+		Margin used around polygons for purposes of spline edge routing.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/inputscale/">inputscale</a>
+		&ndash;
+		Scales the input <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pos/">positions</a> to convert between length units.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/len/">len</a>
+		&ndash;
+		Preferred edge length, in inches.
+		Valid on:
+		Edges.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/levelsgap/">levelsgap</a>
+		&ndash;
+		strictness of neato level constraints.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/maxiter/">maxiter</a>
+		&ndash;
+		Sets the number of iterations used.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/mode/">mode</a>
+		&ndash;
+		Technique for optimizing the layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/model/">model</a>
+		&ndash;
+		Specifies how the distance matrix is computed for the input graph.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/normalize/">normalize</a>
+		&ndash;
+		normalizes coordinates of final layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/notranslate/">notranslate</a>
+		&ndash;
+		Whether to avoid translating layout to the origin point.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap/">overlap</a>
+		&ndash;
+		Determines if and how node overlaps should be removed.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap_scaling/">overlap_scaling</a>
+		&ndash;
+		Scale layout by factor, to reduce node overlap..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pin/">pin</a>
+		&ndash;
+		Keeps the node at the node's given input position.
+		Valid on:
+		Nodes.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pos/">pos</a>
+		&ndash;
+		Position of node, or spline control points.
+		Valid on:
+		Edges, Nodes.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/scale/">scale</a>
+		&ndash;
+		Scales layout by the given factor after the initial layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/sep/">sep</a>
+		&ndash;
+		Margin to leave around nodes when removing node overlap.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/start/">start</a>
+		&ndash;
+		Parameter used to determine the initial layout of nodes.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/voro_margin/">voro_margin</a>
+		&ndash;
+		Tuning margin of Voronoi technique.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+</ul>
+<br/>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://qubitpi.github.io/graphviz.github.io/documentation/GKN04.pdf">Gansner, E.R., Koren, Y., North, S. (2005). Graph Drawing by Stress Majorization. In: Pach, J. (eds) Graph Drawing. GD 2004. Lecture Notes in Computer Science, vol 3383. Springer, Berlin, Heidelberg.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://doi.org/10.1016%2F0020-0190%2889%2990102-6">Tomihisa Kamada, Satoru Kawai, An algorithm for drawing general undirected graphs, Information Processing Letters, Volume 31, Issue 1, 1989, Pages 7-15.</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-05b477850c4a6ee117e01ce845b884b1">3 - fdp</h1>
+    <div class="lead">stands for <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing">Force-Directed Placement</a>.</div>
+	<p>&quot;spring model&quot; layouts similar to those of <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/">neato</a>, but
+does this by reducing forces rather than working with energy.</p>
+<p><code>fdp</code> implements the Fruchterman-Reingold heuristic<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> including a multigrid solver
+that handles larger graphs and clustered undirected graphs.</p>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/dot.1.pdf">PDF Manual</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/tree/main/lib/fdpgen">Browse code</a></li>
+</ul>
+<p style="text-align: center;">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/fdpclust.html">
+    <img src="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/fdpclust.svg">
+  </a>
+</p>
+<h2>Attributes for fdp features</h2>
+<ul>
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dim/">dim</a>
+		&ndash;
+		Set the number of dimensions used for the layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dimen/">dimen</a>
+		&ndash;
+		Set the number of dimensions used for rendering.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/inputscale/">inputscale</a>
+		&ndash;
+		Scales the input <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pos/">positions</a> to convert between length units.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/K/">K</a>
+		&ndash;
+		Spring constant used in virtual physical model.
+		Valid on:
+		Graphs, Clusters.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/len/">len</a>
+		&ndash;
+		Preferred edge length, in inches.
+		Valid on:
+		Edges.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/maxiter/">maxiter</a>
+		&ndash;
+		Sets the number of iterations used.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/normalize/">normalize</a>
+		&ndash;
+		normalizes coordinates of final layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap_scaling/">overlap_scaling</a>
+		&ndash;
+		Scale layout by factor, to reduce node overlap..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pin/">pin</a>
+		&ndash;
+		Keeps the node at the node's given input position.
+		Valid on:
+		Nodes.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pos/">pos</a>
+		&ndash;
+		Position of node, or spline control points.
+		Valid on:
+		Edges, Nodes.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/sep/">sep</a>
+		&ndash;
+		Margin to leave around nodes when removing node overlap.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/start/">start</a>
+		&ndash;
+		Parameter used to determine the initial layout of nodes.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+</ul>
+<br/>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://doi.org/10.1002/spe.4380211102">Fruchterman, T.M.J. and Reingold, E.M. (1991), Graph drawing by force-directed placement. Softw: Pract. Exper., 21: 1129-1164.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-fe31ac57626be911056b21d98f478cb2">4 - sfdp</h1>
+    <div class="lead">stands for Scalable <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing">Force-Directed Placement</a>.</div>
+	<p><code>sfdp</code> is a fast, multilevel, force-directed algorithm that efficiently layouts large graphs, outlined in &quot;Efficient and High Quality Force-Dircted Graph Drawing&quot;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Multiscale version of the <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/"><code>fdp</code></a> layout, for the layout of large graphs.</p>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/dot.1.pdf">PDF Manual</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/tree/main/lib/sfdpgen">Browse code</a></li>
+</ul>
+<p style="text-align: center;">
+  <img src="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/200910_viz_matrix_188w.png">
+</p>
+<h2>Attributes for sfdp features</h2>
+<ul>
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/beautify/">beautify</a>
+		&ndash;
+		Whether to draw leaf nodes uniformly in a circle around the root node in sfdp..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dim/">dim</a>
+		&ndash;
+		Set the number of dimensions used for the layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/dimen/">dimen</a>
+		&ndash;
+		Set the number of dimensions used for rendering.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/K/">K</a>
+		&ndash;
+		Spring constant used in virtual physical model.
+		Valid on:
+		Graphs, Clusters.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/label_scheme/">label_scheme</a>
+		&ndash;
+		Whether to treat a node whose name has the form <code>|edgelabel|*</code> as a special node representing an edge label..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/levels/">levels</a>
+		&ndash;
+		Number of levels allowed in the multilevel scheme.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/normalize/">normalize</a>
+		&ndash;
+		normalizes coordinates of final layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap_scaling/">overlap_scaling</a>
+		&ndash;
+		Scale layout by factor, to reduce node overlap..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap_shrink/">overlap_shrink</a>
+		&ndash;
+		Whether the overlap removal algorithm should perform a compression pass to reduce the size of the layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/quadtree/">quadtree</a>
+		&ndash;
+		Quadtree scheme to use.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/repulsiveforce/">repulsiveforce</a>
+		&ndash;
+		The power of the repulsive force used in an extended Fruchterman-Reingold.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rotation/">rotation</a>
+		&ndash;
+		Rotates the final layout counter-clockwise by the specified number of degrees.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/smoothing/">smoothing</a>
+		&ndash;
+		Specifies a post-processing step used to smooth out an uneven distribution of nodes..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/start/">start</a>
+		&ndash;
+		Parameter used to determine the initial layout of nodes.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/voro_margin/">voro_margin</a>
+		&ndash;
+		Tuning margin of Voronoi technique.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+</ul>
+<br/>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="http://yifanhu.net/PUB/graph_draw_small.pdf">Hu, Yifan. (2005). Efficient and High Quality Force-Directed Graph Drawing. Mathematica Journal. 10. 37-71.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b400d08886eba0e9f454994774a408f8">5 - circo</h1>
+    <div class="lead"><a href="https://en.wikipedia.org/wiki/Circular_layout">circular layout</a>.</div>
+	<p>After Six and Tollis 1999<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, Kauffman and Wiese 2002<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<p>This is suitable for certain diagrams of multiple cyclic structures, such as
+certain telecommunications networks.</p>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/dot.1.pdf">PDF Manual</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/tree/main/lib/circogen">Browse code</a></li>
+</ul>
+<p style="text-align: center;">
+  <img src="https://qubitpi.github.io/graphviz.github.io/Gallery/undirected/honda-tokoro.circo.png">
+</p>
+<h2>Attributes for circo features</h2>
+<ul>
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/mindist/">mindist</a>
+		&ndash;
+		Specifies the minimum separation between all nodes.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/root/">root</a>
+		&ndash;
+		Specifies nodes to be used as the center of the layout.
+		Valid on:
+		Graphs, Nodes.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/normalize/">normalize</a>
+		&ndash;
+		normalizes coordinates of final layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/oneblock/">oneblock</a>
+		&ndash;
+		Whether to draw circo graphs around one circle..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap_scaling/">overlap_scaling</a>
+		&ndash;
+		Scale layout by factor, to reduce node overlap..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/voro_margin/">voro_margin</a>
+		&ndash;
+		Tuning margin of Voronoi technique.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+</ul>
+<br/>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://doi.org/10.1007/3-540-46648-7_11">Six J.M., Tollis I.G. (1999) A Framework for Circular Drawings of Networks. In: Kratochvíyl J. (eds) Graph Drawing. GD 1999. Lecture Notes in Computer Science, vol 1731. Springer, Berlin, Heidelberg.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://doi.org/10.1007/3-540-48518-X_4">Six J.M., Tollis I.G. (1999) Circular Drawings of Biconnected Graphs. In: Goodrich M.T., McGeoch C.C. (eds) Algorithm Engineering and Experimentation. ALENEX 1999. Lecture Notes in Computer Science, vol 1619. Springer, Berlin, Heidelberg.</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://doi.org/10.1142/9789812796608_0005">Michael Kaufmann, Roland Wiese (2002) Embedding Vertices at Points: Few Bends suffice for Planar Graphs. In: Journal of Graph Algorithms and Applications. vol. 6, no. 1, pp. 115–129</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6a60103e6d8de0ef8ecee0dc942f5794">6 - twopi</h1>
+    <div class="lead">radial layout.</div>
+	<p>After Graham Wills 1997<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Nodes are placed on concentric circles depending their distance from a given
+root node.</p>
+<p>You can set the root node, or let <code>twopi</code> do it.</p>
+<p style="text-align: center;">
+  <a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/twopi2.html">
+    <img src="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/twopi2.svg">
+  </a>
+</p>
+<h2>Attributes for twopi features</h2>
+<ul>
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/normalize/">normalize</a>
+		&ndash;
+		normalizes coordinates of final layout.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/overlap_scaling/">overlap_scaling</a>
+		&ndash;
+		Scale layout by factor, to reduce node overlap..
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/ranksep/">ranksep</a>
+		&ndash;
+		Specifies separation between ranks.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/root/">root</a>
+		&ndash;
+		Specifies nodes to be used as the center of the layout.
+		Valid on:
+		Graphs, Nodes.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/voro_margin/">voro_margin</a>
+		&ndash;
+		Tuning margin of Voronoi technique.
+		Valid on:
+		Graphs.
+	
+</li>
+
+
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/weight/">weight</a>
+		&ndash;
+		Weight of edge.
+		Valid on:
+		Edges.
+	
+</li>
+
+
+</ul>
+<br/>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/Gallery/twopi/">Gallery</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/tree/main/lib/twopigen">Browse code</a></li>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/dot.1.pdf">PDF Manual</a></li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://doi.org/10.1080/10618600.1999.10474810">Graham J. Wills (1999) NicheWorks—Interactive Visualization of Very Large Graphs, Journal of Computational and Graphical Statistics, 8:2, 190-212</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-311ac82ae39b5fabe81b968762dc78ba">7 - nop</h1>
+    <div class="lead">Pretty-print DOT graph file. Equivalent to <code>nop1</code>.</div>
+	<p>Prints input graphs in pretty-printed (canonical) form.</p>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/nop.1.pdf">PDF Manual</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/blob/main/cmd/tools/nop.c">Browse code</a></li>
+</ul>
+<p>Example, indenting the input:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell-session" data-lang="shell-session"><span style="display:flex;"><span><span style="color:#8f5902">$</span> <span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#39;digraph { a -&gt; b; c-&gt;d; }&#39;</span> <span style="color:#000;font-weight:bold">|</span> nop
+</span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">digraph {
+</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">        a -&gt; b;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">        c -&gt; d;
+</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">}
+</span></span></span></code></pre></div><p><code>nop</code> also deduplicates node specifications:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell-session" data-lang="shell-session"><span style="display:flex;"><span><span style="color:#8f5902">$</span> <span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#39;digraph { a; a [label=&#34;A&#34;]; a [color=blue]; }&#39;</span> <span style="color:#000;font-weight:bold">|</span> nop
+</span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">digraph {
+</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">        a       [color=blue,
+</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">                label=A];
+</span></span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">}
+</span></span></span></code></pre></div><p><code>nop -p</code> produces no input, just checks the input for valid DOT language.</p>
+<p>For example, this valid graph produces no output:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell-session" data-lang="shell-session"><span style="display:flex;"><span><span style="color:#8f5902">$</span> <span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#39;digraph {}&#39;</span> <span style="color:#000;font-weight:bold">|</span> nop -p
+</span></span></code></pre></div><p>But this syntax error (missing <code>}</code>) exits with status code <code>1</code> and prints error
+message:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell-session" data-lang="shell-session"><span style="display:flex;"><span><span style="color:#8f5902">$</span> <span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#39;digraph {&#39;</span> <span style="color:#000;font-weight:bold">|</span> nop -p
+</span></span><span style="display:flex;"><span><span style="color:#000;font-style:italic">Error: &lt;stdin&gt;: syntax error in line 2
+</span></span></span></code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4488f9083cf44cdd7bb9baefa908eb29">8 - nop2</h1>
+    <div class="lead">Pretty-print DOT graph file, assuming positions already known.</div>
+	<p>Invoke equivalently as:</p>
+<ul>
+<li><code>neato -n2</code></li>
+<li><code>dot -Knop2</code></li>
+</ul>
+<p>Assumes positions already specified in the input with the <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pos"><code>pos</code></a> attribute.</p>
+<p>This performs an optional adjustment to remove node-node overlap, computes edge layouts, and emites the graphs.</p>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/dot.1.pdf">PDF Manual (<code>-n</code> section of <code>neato</code>)</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/blob/main/plugin/neato_layout/gvlayout_neato_layout.c">Browse code</a></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7b13721da022477e28ea60cf9e8f46f5">9 - osage</h1>
+    <div class="lead">draws clustered graphs.</div>
+	<p>As input, <code>osage</code> takes any graph in the <a href="https://qubitpi.github.io/graphviz.github.io/doc/info/lang.html">dot format</a>.</p>
+<p><code>osage</code> draws the graph recursively.  At each level, there will be a collection of
+nodes and a collection of cluster subgraphs. The internals of each cluster
+subgraph are laid out, then the cluster subgraphs and nodes at the current
+level are positioned relative to each other, treating each cluster subgraph as
+a node.</p>
+<p>At each level, the nodes and cluster subgraphs are viewed as rectangles to be
+packed together. At present, edges are ignored during packing. Packing is done
+using the standard packing functions. In particular, the graph attributes
+<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/pack/"><code>pack</code></a> and <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/packmode/"><code>packmode</code></a> control the layout. Each graph and cluster can
+specify its own values for these attributes. Remember also that a cluster
+inherits its attribute values from its parent graph.</p>
+<p>After all nodes and clusters, edges are routed based on the value of the
+<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/splines/"><code>splines</code></a> attribute.</p>
+<p>Example:</p>
+<p style="text-align: center;">
+<img src="https://qubitpi.github.io/graphviz.github.io/docs/layouts/osage.svg">
+</p>
+Source of the example:
+
+
+
+<div class="card mb-4">
+  
+  <div class="card-body">
+    
+    <pre tabindex="0"><code class="language-dot" data-lang="dot">graph {
+	layout=osage
+		subgraph cluster_0 {
+			label=&#34;composite cluster&#34;;
+			subgraph cluster_1 {
+			    label=&#34;the first cluster&#34;;
+				C
+				L
+				U
+				S
+				T
+				E
+				R
+			}
+			subgraph cluster_2 {
+			    label=&#34;the second\ncluster&#34;;
+				a
+				b
+				c
+				d
+			}
+			1
+			2
+		}
+	3
+	4
+	5
+}</code></pre></div>
+  <div class="card-footer">
+    <a href="http://magjac.com/graphviz-visual-editor/?dot=graph%20%7b%0a%09layout%3dosage%0a%09%09subgraph%20cluster_0%20%7b%0a%09%09%09label%3d%22composite%20cluster%22%3b%0a%09%09%09subgraph%20cluster_1%20%7b%0a%09%09%09%20%20%20%20label%3d%22the%20first%20cluster%22%3b%0a%09%09%09%09C%0a%09%09%09%09L%0a%09%09%09%09U%0a%09%09%09%09S%0a%09%09%09%09T%0a%09%09%09%09E%0a%09%09%09%09R%0a%09%09%09%7d%0a%09%09%09subgraph%20cluster_2%20%7b%0a%09%09%09%20%20%20%20label%3d%22the%20second%5cncluster%22%3b%0a%09%09%09%09a%0a%09%09%09%09b%0a%09%09%09%09c%0a%09%09%09%09d%0a%09%09%09%7d%0a%09%09%091%0a%09%09%092%0a%09%09%7d%0a%093%0a%094%0a%095%0a%7d" target="_blank"><i class="fa fa-external-link-alt"></i> Edit in Playground</a>
+    
+  </div>
+</div>
+
+
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/osage.1.pdf">PDF Manual</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/tree/main/lib/osage">Browse code</a></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ee5b9ea2924a1c6a91e5d0f9abe746e7">10 - patchwork</h1>
+    <div class="lead">draws map of clustered graph using a <a href="https://en.wikipedia.org/wiki/Treemapping">squarified treemap layout</a>.</div>
+	<p>Each cluster is given an area based on the areas specified by the clusters and
+nodes it contains. The areas of nodes and empty clusters can be specified by
+the <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/area/"><code>area</code></a> attribute. The default <code>area</code>
+is 1.</p>
+<p>The root graph is laid out as a square. Then, recursively, the region of a
+cluster or graph is partitioned among its top-level nodes and clusters, with
+each given a roughly square subregion with its specified area.</p>
+<p>Example: Australian Coins, area proportional to value</p>
+<p style="text-align: center">
+	<img style="width: 50%" src="https://qubitpi.github.io/graphviz.github.io/docs/layouts/patchwork.svg">
+</p>
+Source of the example:
+
+
+
+<div class="card mb-4">
+  
+  <div class="card-body">
+    
+    <pre tabindex="0"><code class="language-dot" data-lang="dot">graph {
+	layout=patchwork
+	node [style=filled]
+	&#34;$2&#34;  [area=200 fillcolor=gold]
+	&#34;$1&#34;  [area=100 fillcolor=gold]
+	&#34;50c&#34; [area= 50 fillcolor=silver]
+	&#34;20c&#34; [area= 20 fillcolor=silver]
+	&#34;10c&#34; [area= 10 fillcolor=silver]
+	&#34;5c&#34;  [area=  5 fillcolor=silver]
+}</code></pre></div>
+  <div class="card-footer">
+    <a href="http://magjac.com/graphviz-visual-editor/?dot=graph%20%7b%0a%09layout%3dpatchwork%0a%09node%20%5bstyle%3dfilled%5d%0a%09%22%242%22%20%20%5barea%3d200%20fillcolor%3dgold%5d%0a%09%22%241%22%20%20%5barea%3d100%20fillcolor%3dgold%5d%0a%09%2250c%22%20%5barea%3d%2050%20fillcolor%3dsilver%5d%0a%09%2220c%22%20%5barea%3d%2020%20fillcolor%3dsilver%5d%0a%09%2210c%22%20%5barea%3d%2010%20fillcolor%3dsilver%5d%0a%09%225c%22%20%20%5barea%3d%20%205%20fillcolor%3dsilver%5d%0a%7d" target="_blank"><i class="fa fa-external-link-alt"></i> Edit in Playground</a>
+    
+  </div>
+</div>
+
+
+<h2>Attributes for patchwork features</h2>
+<ul>
+<li>
+	
+	
+	
+		
+	
+	
+		<a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/area/">area</a>
+		&ndash;
+		Indicates the preferred area for a node or empty cluster.
+		Valid on:
+		Nodes, Clusters.
+	
+</li>
+
+
+</ul>
+<br/>
+<ul>
+<li><a href="https://qubitpi.github.io/graphviz.github.io/pdf/patchwork.1.pdf">PDF Manual</a></li>
+<li><a href="https://gitlab.com/graphviz/graphviz/-/tree/main/lib/patchwork">Browse code</a></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-828244c6b32eca9d30471f70e8c3404e">11 - Writing Layout Plugins</h1>
+    <div class="lead">How to write a custom layout engine.</div>
+	<p>To create a new layout plugin called <code>xxx</code>, you first need
+to provide two functions: <code>xxx_layout</code> and <code>xxx_cleanup</code>. The
+semantics of these are described below.</p>
+<h2 id="layout">Layout</h2>
+<pre tabindex="0"><code>void xxx_layout(Agraph_t * g)
+</code></pre><p>Initialize the graph.</p>
+<ul>
+<li>
+<p>If the algorithm will use the common edge routing code, it should
+call <code>setEdgeType (g, ...);</code>.</p>
+</li>
+<li>
+<p>For each node, call <code>common_init_node</code> and <code>gv_nodesize</code>.</p>
+</li>
+<li>
+<p>If the algorithm will use <code>spline_edges()</code> to route the edges, the
+node coordinates need to be stored in <code>ND_pos</code>, so this should be
+allocated here. This, and the two calls mentioned above, are all
+handled by a call to <code>neato_init_node()</code>.</p>
+</li>
+<li>
+<p>For each edge, call <code>common_init_edge</code>.</p>
+</li>
+<li>
+<p>The algorithm should allocate whatever other data structures it
+needs. This can involve fields in the <code>A*info_t</code> fields. In addition,
+each of these fields contains a <code>void* alg;</code> subfield that the algorithm
+can use the store additional data.  Once we move to cgraph, this will all be
+replaced with algorithm specific records.</p>
+</li>
+<li>
+<p>Layout the graph. When finished, each node should have its coordinates
+stored in points in <code>ND_coord_i(n)</code>, each edge should have its layout
+described in <code>ED_spl(e)</code>.
+(N.B. As of version 2.21, <code>ND_coord_i</code> has been replaced by <code>ND_coord</code>,
+which are now floating point coordinates.)</p>
+</li>
+</ul>
+<p>To add edges, there are 3 functions available:</p>
+<ol>
+<li><code>spline_edges1 (Agraph_t*, int edgeType)</code>
+Assumes the node coordinates are stored in <code>ND_coord_i</code>, and that
+<code>GD_bb</code> is set. For each edge, this function constructs the appropriate
+data and stores it in <code>ED_spl</code>.</li>
+<li><code>spline_edges0 (Agraph_t*)</code>
+Assumes the node coordinates are stored in <code>ND_pos</code>, and that
+<code>GD_bb</code> is set. This function uses the ratio attribute if set,
+copies the values in <code>ND_pos</code> to <code>ND_coord_i</code> (converting from
+inches to points); and calls spline_edges1 using the edge type
+specified by <code>setEdgeType()</code>.</li>
+<li><code>spline_edges (Agraph_t*)</code>
+Assumes the node coordinates are stored in <code>ND_pos</code>. This
+function calculates the bounding box of g and stores it in <code>GD_bb</code>,
+then calls <code>spline_edges0()</code>.</li>
+</ol>
+<p>If the algorithm only works with connected components, the code can
+use the pack library to get components, lay them out individually, and
+pack them together based on user specifications. A typical schema is
+given below. One can look at the code for <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/twopi/"><code>twopi</code></a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/circo/"><code>circo</code></a>, <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/neato/"><code>neato</code></a> or <a href="https://qubitpi.github.io/graphviz.github.io/docs/layouts/fdp/"><code>fdp</code></a>
+for more detailed examples.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#000">Agraph_t</span> <span style="color:#ce5c00;font-weight:bold">**</span><span style="color:#000">ccs</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Agraph_t</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">sg</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Agnode_t</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">c</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">NULL</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">ncc</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">i</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ccs</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ccomps</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">ncc</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">ncc</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/* layout nodes of g */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">adjustNodes</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span>  <span style="color:#8f5902;font-style:italic">/* if you need to remove overlaps */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">spline_edges</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span> <span style="color:#8f5902;font-style:italic">/* generic edge routing code */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">pack_info</span> <span style="color:#000">pinfo</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">pack_mode</span> <span style="color:#000">pmode</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">getPackMode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">l_node</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">ncc</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">sg</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ccs</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">];</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8f5902;font-style:italic">/* layout sg */</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">adjustNodes</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">sg</span><span style="color:#000;font-weight:bold">);</span>  <span style="color:#8f5902;font-style:italic">/* if you need to remove overlaps */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">spline_edges</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span>  <span style="color:#8f5902;font-style:italic">/* generic edge routing */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic">/* initialize packing info, e.g. */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">pinfo</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">margin</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">getPack</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">CL_OFFSET</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">CL_OFFSET</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">pinfo</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">doSplines</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">pinfo</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">mode</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">pmode</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">pinfo</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">fixed</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">packSubgraphs</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ncc</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ccs</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">pinfo</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">i</span> <span style="color:#ce5c00;font-weight:bold">&lt;</span> <span style="color:#000">ncc</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">agdelete</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">ccs</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">]);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">free</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ccs</span><span style="color:#000;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Be careful in laying of subgraphs if you rely on attributes that have
+only been set in the root graph. With connected components, edges can
+be added with each component, before packing (as above) or after the
+components have been packed (see circo).</p>
+<p>It is good to check for trivial cases where the graph has 0 or 1 nodes,
+or no edges.</p>
+<p>At the end of <code>xxx_layout</code>, call</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#000">dotneato_postprocess</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span>
+</span></span></code></pre></div><p>The following template will work in most cases, ignoring the problems of
+handling disconnected graphs and removing node overlaps:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">void</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">xxx_init_node</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">node_t</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">neato_init_node</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">n</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic">/* add algorithm-specific data, if desired */</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">void</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">xxx_init_edge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">edge_t</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">common_init_edge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic">/* add algorithm-specific data, if desired */</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">void</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">xxx_init_node_edge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">graph_t</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">node_t</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">n</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">edge_t</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">n</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agfstnode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">n</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agnxtnode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">))</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000">xxx_init_node</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">n</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">n</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agfstnode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">n</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agnxtnode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">))</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agfstout</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">);</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">e</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agnxtout</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">)){</span>          
+</span></span><span style="display:flex;"><span>          <span style="color:#000">xxx_init_edge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">void</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">xxx_layout</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">Agraph_t</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">xxx_init_node_edge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic">/* Set ND_pos(n) for each node n */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">spline_edges</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">dotneato_postprocess</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>  
+</span></span></code></pre></div><h2 id="cleanup">Cleanup</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">xxx_cleanup</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Agraph_t</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">)</span>
+</span></span></code></pre></div><p>Free up any resources allocated in the layout.</p>
+<p>Finish with calls to <code>gv_cleanup_node</code> and <code>gv_cleanup_edge</code> for
+each node and edge. This cleans up splines labels, <code>ND_pos</code>, shapes
+and 0's out the <code>A*info_t</code>, so these have to occur last, but could be
+part of explicit <code>xxx_cleanup_node</code> and <code>xxx_cleanup_edge</code>, if desired.</p>
+<p>At the end, you should do:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">!=</span> <span style="color:#000">g</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#000">root</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">memset</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#000">u</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">sizeof</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Agraphinfo_t</span><span style="color:#000;font-weight:bold">));</span>
+</span></span></code></pre></div><p>This is necessary for the graph to be laid out again, as the layout
+code assumes this structure is clean.</p>
+<p><code>libgvc</code> does a final cleanup to the root graph, freeing any drawing,
+freeing its label, and zeroing out <code>Agraphinfo_t</code> of the root graph.</p>
+<p>The following template will work in most cases:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">xxx_cleanup_graph</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Agraph_t</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic">/* Free any algorithm-specific data attached to the graph */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span> <span style="color:#ce5c00;font-weight:bold">!=</span> <span style="color:#000">g</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#000">root</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">memset</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#ce5c00;font-weight:bold">-&gt;</span><span style="color:#000">u</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">sizeof</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Agraphinfo_t</span><span style="color:#000;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">xxx_cleanup_edge</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">Agedge_t</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic">/* Free any algorithm-specific data attached to the edge */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">gv_cleanup_edge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">xxx_cleanup_node</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">Agnode_t</span><span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic">/* Free any algorithm-specific data attached to the node */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">gv_cleanup_node</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">void</span> <span style="color:#000">xxx_cleanup</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Agraph_t</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">g</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">Agnode_t</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">n</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">Agedge_t</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">n</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agfstnode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">n</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agnxtnode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">))</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agfstout</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">n</span><span style="color:#000;font-weight:bold">);</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">e</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">agnxtout</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">e</span><span style="color:#000;font-weight:bold">))</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#000">xxx_cleanup_edge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000">xxx_cleanup_node</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">n</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">xxx_cleanup_graph</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">g</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>   
+</span></span></code></pre></div><p>Most layouts use auxiliary routines similar to <code>neato</code>, so
+the entry points can be added in <code>plugin/neato_layout</code>.</p>
+<p>Add to <code>gvlayout_neato_layout.c</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">gvlayout_engine_t</span> <span style="color:#000">xxxgen_engine</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">xxx_layout</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">xxx_cleanup</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">};</span>
+</span></span></code></pre></div><p>and the line</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">LAYOUT_XXX</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;xxx&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">xxxgen_engine</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">neatogen_features</span><span style="color:#000;font-weight:bold">},</span>
+</span></span></code></pre></div><p>to <code>gvlayout_neato_types</code> and a new emum <code>LAYOUT_XXX</code> to <code>layout_type</code> in that file.</p>
+<p>The above allows the new layout to piggyback on top of the <code>neato</code>
+plugin, but requires rebuilding the plugin. In general, a user
+can (and probably should) build a layout plugin totally separately.</p>
+<p>To do this, after writing <code>xxx_layout</code> and <code>xxx_cleanup</code>, it is necessary to:</p>
+<ol>
+<li>
+<p>Add the types and data structures:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">typedef</span> <span style="color:#204a87;font-weight:bold">enum</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000">LAYOUT_XXX</span> <span style="color:#000;font-weight:bold">}</span> <span style="color:#000">layout_type</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">gvlayout_features_t</span> <span style="color:#000">xxxgen_features</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0000cf;font-weight:bold">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">gvlayout_engine_t</span> <span style="color:#000">xxxgen_engine</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">xxx_layout</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">xxx_cleanup</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">gvplugin_installed_t</span> <span style="color:#000">gvlayout_xxx_types</span><span style="color:#000;font-weight:bold">[]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span><span style="color:#000">LAYOUT_XXX</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;xxx&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">xxxgen_engine</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">xxxgen_features</span><span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87">NULL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87">NULL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87">NULL</span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span> <span style="color:#204a87;font-weight:bold">gvplugin_api_t</span> <span style="color:#000">apis</span><span style="color:#000;font-weight:bold">[]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span><span style="color:#000">API_layout</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">gvlayout_xxx_types</span><span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{(</span><span style="color:#204a87;font-weight:bold">api_t</span><span style="color:#000;font-weight:bold">)</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">gvplugin_library_t</span> <span style="color:#000">gvplugin_xxx_layout_LTX_library</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#4e9a06">&#34;xxx_layout&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">apis</span> <span style="color:#000;font-weight:bold">};</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Combine all of this into a dynamic library whose name contains the
+string <code>gvplugin_</code> and install the library in the same directory as the
+other Graphviz plugins. For example, on Linux systems, the dot layout
+plugin is in the library <code>libgvplugin_dot_layout.so</code>.</p>
+</li>
+<li>
+<p>Run <code>dot -c</code> to regenerate the config file.</p>
+</li>
+</ol>
+<p>NOTES:</p>
+<ul>
+<li>Additional layouts can be added as extra lines in <code>gvlayout_xxx_types</code>.</li>
+<li>Obviously, most of the names and strings can be arbitrary. One
+constraint is that external identifier for the <code>gvplugin_library_t</code>
+type must end in <code>_LTX_library</code>. In addition, the string <code>xxx</code> in
+each entry of <code>gvlayout_xxx_types</code> is the name used to identify the
+layout algorithm, so needs to be distinct from any other layout name.</li>
+<li>The features of a layout algorithm are currently limited to a
+flag of bits, and the only flag supported is <code>LAYOUT_USES_RANKDIR</code>,
+which enables the layout to the <a href="https://qubitpi.github.io/graphviz.github.io/docs/attrs/rankdir/"><code>rankdir</code></a> attribute.</li>
+</ul>
+<p>Changes need to be made to any applications that
+statically know about layout algorithms.</p>
+<h2 id="automake-configuration">Automake Configuration</h2>
+<p>If you want to integrate your code into the Graphviz software
+and use its build system, follow the instructions below.
+You can certainly build and install your plugin using your own
+build software.</p>
+<ol start="0">
+<li>Put your software in <code>lib/xxxgen</code>, and added the hooks describe above
+into <code>gvlayout_neato_layout.c</code></li>
+<li>In <code>lib/xxxgen</code>, provide a <code>Makefile.am</code> (based on a simple example
+like <code>lib/fdpgen/Makefile.am</code>)</li>
+<li>In <code>lib/Makefile.am</code>, add <code>xxxgen</code> to <code>SUBDIRS</code></li>
+<li>In <code>configure.ac</code>, add <code>lib/xxxgen/Makefile</code> to <code>AC_CONFIG_FILES</code>.</li>
+<li>In <code>lib/plugin/neato_layout/Makefile.am</code>, insert
+<code>$(top_builddir)/lib/xxxgen/libxxxgen_C.la</code>
+in <code>libgvplugin_neato_layout_C_la_LIBADD</code>.</li>
+<li>Remember to run <code>autogen.sh</code> because on its own <code>configure</code> can guess wrong.</li>
+</ol>
+<p>This also assumes you have a good version of the various automake tools
+on your system.</p>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" rel="noopener" href="https://forum.graphviz.org/" aria-label="User mailing list">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/graphviz" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Stack Overflow" aria-label="Stack Overflow">
+    <a class="text-white" target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/graphviz" aria-label="Stack Overflow">
+      <i class="fab fa-stack-overflow"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitLab" aria-label="GitLab">
+    <a class="text-white" target="_blank" rel="noopener" href="https://gitlab.com/graphviz/graphviz" aria-label="GitLab">
+      <i class="fab fa-gitlab"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 The Graphviz Authors All Rights Reserved</small>
+        
+	
+		<p class="mt-2"><a href="https://qubitpi.github.io/graphviz.github.io/about/">About</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://qubitpi.github.io/graphviz.github.io/js/main.min.91798a335c881f1b6b805085ba4aa22d1dbd2b0b18d105d05189fa104ddae350.js" integrity="sha256-kXmKM1yIHxtrgFCFukqiLR29KwsY0QXQUYn6EE3a41A=" crossorigin="anonymous"></script>
+
+
+
+<script src='https://qubitpi.github.io/graphviz.github.io/js/prism.js'></script>
+
+
+
+  </body>
+</html>
